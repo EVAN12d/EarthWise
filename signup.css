@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #f4f9f7;
+    color: #245350;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+}
+h1, h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+}
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+    border-bottom: 1px solid;
+}
+.logo {
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border: 1px solid #328e8e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.back-link {
+    color: #176b5b;
+    font-size: 16px;
+    text-decoration: none;
+}
+.back-link:hover {
+    color: #176b5b;
+}
+.signup-section {
+    min-height: 650px;
+    padding: 60px 25px;
+}
+.small-title {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #2d8a76;
+}
+.intro h1 {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 22px 0;
+    color: #245350;
+}
+.intro p {
+    color: #638b83;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 430px;
+}
+.intro-line {
+    width: 65px;
+    height: 3px;
+    background-color: #2d8a76;
+    margin: 35px 0 20px;
+}
+.intro-bottom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #4f8587;
+}
+.intro-bottom i {
+    font-size: 23px;
+    color: #2d8a76;
+}
+.form-section {
+    background-color: white;
+    border: 1px solid #e1eae5;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 12px 36px rgba(44, 96, 91, 0.055);
+}
+.form-section h2 {
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.form-description {
+    color: #71938d;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.form-label {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.form-control {
+    height: 47px;
+    border: 1px solid #dce7e4;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #245350;
+}
+.form-control::placeholder {
+    color: #9aaea9;
+}
+.form-control:focus {
+    border-color: #2d8a76;
+    box-shadow: none;
+}
+.password-hint {
+    display: block;
+    margin-top: 7px;
+    color: #71938d;
+    font-size: 11px;
+}
+.register-btn {
+    width: 100%;
+    background-color: #2d8a76;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 13px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 12px;
+    cursor: pointer;
+}
+.register-btn:hover {
+    background-color: #176b5b;
+}
+.register-btn i {
+    margin-left: 8px;
+}
+.login-text {
+    text-align: center;
+    font-size: 13px;
+    color: #71938d;
+    margin-top: 25px;
+}
+.login-text a {
+    color: #2d8a76;
+    font-weight: 700;
+    text-decoration: none;
+}
+.login-text a:hover {
+    text-decoration: underline;
+}
+.form-footer {
+    border-top: 1px solid #e1eae5;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+.form-footer a {
+    color: #71938d;
+    text-decoration: none;
+}
+.form-footer a:hover {
+    color: #2d8a76;
+}
+.form-footer span {
+    margin: 0 10px;
+    color: #a8c4bc;
+}
+.page-footer {
+    padding: 20px 0;
+    border-top: 1px solid #dceae5;
+    text-align: center;
+}
+.page-footer p {
+    font-size: 12px;
+    color: #71938d;
+}
+@media (max-width: 991px) {
+    .signup-section {
+        padding: 45px 10px;
+    }
+    .intro {
+        margin-bottom: 40px;
+    }
+    .intro h1 {
+        font-size: 36px;
+    }
+}
+@media (max-width: 576px) {
+    .top-bar {
+        padding: 25px 0;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .back-link {
+        font-size: 11px;
+    }
+    .signup-section {
+        padding: 35px 0;
+    }
+    .intro h1 {
+        font-size: 30px;
+    }
+    .intro p {
+        font-size: 14px;
+    }
+    .form-section {
+        padding: 25px 20px;
+    }
+    .form-section h2 {
+        font-size: 24px;
+    }
+}
