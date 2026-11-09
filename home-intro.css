@@ -124,11 +124,11 @@
 }
 
 #home-intro-added .feature-card:first-child {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.12) 65%, transparent 100%), url("../../Home Intro/image/safety-guide-feature(1).jpg");
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.12) 65%, transparent 100%), url("image/safety-guide.webp");
 }
 
 #home-intro-added .feature-card:last-child {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.12) 65%, transparent 100%), url("../../Home Intro/image/teaching.jpg");
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.12) 65%, transparent 100%), url("image/fungame.png");
 }
 
 #home-intro-added .feature-card:hover {
