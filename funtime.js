@@ -1,8 +1,7 @@
-
 var categories = [
     {
         name: "Myanmar Earthquake History",
-        video: "Video/earthquake_history.mp4",
+        video: "earthquake_history.mp4",
         questions: [
             {
                 question: "Which major fault is responsible for many significant earthquakes in Myanmar?",
@@ -63,7 +62,7 @@ var categories = [
     },
     {
         name: "Understanding Earthquakes",
-        video: "Video/understanding_earthquake.mp4",
+        video: "understanding_earthquake.mp4",
         questions: [
             {
                 question: "What causes most earthquakes?",
@@ -124,7 +123,7 @@ var categories = [
     },
     {
         name: "Earthquake Safety Challenge",
-        video: "Video/safety.mp4",
+        video: "safety.mp4",
         questions: [
             {
                 question: "What should you do during earthquake shaking if you are indoors?",
