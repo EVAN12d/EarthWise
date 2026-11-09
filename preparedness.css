@@ -1778,3 +1778,43 @@ html {
     background: #edf7f5;
     color: #176b5b;
 }
+@media (max-width: 768px) {
+    .checklist-section {
+        margin: 15px 0;
+        padding: 15px;
+    }
+    .checklist-box,
+    .why-box {
+        padding: 18px;
+    }
+    .checklist-top {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 15px;
+    }
+    .checklist-top > div:first-child {
+        width: 100%;
+        min-width: 0;
+    }
+    .section-heading-03 {
+        min-width: 0;
+    }
+    .checklist-box .section-heading-03 h3 {
+        font-size: 23px;
+    }
+    .progress-info {
+        width: 100%;
+        text-align: left;
+    }
+    .progress-info h2 {
+        font-size: 26px;
+        margin-bottom: 5px;
+    }
+    .progress-info p {
+        font-size: 13px;
+    }
+    .check-item {
+        font-size: 12px;
+        padding: 12px;
+    }
+}
