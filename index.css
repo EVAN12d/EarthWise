@@ -1563,3 +1563,7 @@ html {
     background: #edf7f5;
     color: #176b5b;
 }
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
