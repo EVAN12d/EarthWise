@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="home-intro.css">
+    <link rel="stylesheet" href="wmt-main.css">
+    <link rel="stylesheet" href="part1.css">
+    <!-- Other Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+
+    <!-- Navbar KPPT -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <!-- Website Logo -->
+            <a href="index.html" class="logo" aria-label="Home">
+                <img src="image/Screenshot 2026-11-04 213028.png" alt="logo" style="background-color: #eef7f6;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <div class="nav-links mx-auto">
+                    <a href="index.html" class="nav-item-custom active">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="Earthquake.html" class="nav-item-custom">
+                        <i class="bi bi-globe-asia-australia"></i>
+                        <span>Earthquakes</span>
+                    </a>
+
+                    <div class="dropdown">
+                        <a href="#" class="nav-item-custom dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Safety Hub</span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="Safety.html"><i class="bi bi-shield-check"></i>Safety</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="preparedness.html"><i class="bi bi-backpack"></i>Preparedness</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="risk-reduction.html"><i class="bi bi-house-check"></i>Risk Reduction</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="funtime.html"><i class="bi bi-controller"></i>Fun Time</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="resources.html" class="nav-item-custom">
+                        <i class="bi bi-journal-bookmark"></i>
+                        <span>Resources</span>
+                    </a>
+
+                    <a href="FAQ.html" class="nav-item-custom">
+                        <i class="bi bi-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+
+                    <div class="dropdown">
+                        <a href="#" class="nav-item-custom dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="goal_mission_vision.html"><i class="bi bi-bullseye"></i>Our Goal, Mission Vision</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="developers.html"><i class="bi bi-people"></i>Developers</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="contact_us.html"><i class="bi bi-envelope"></i>Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="account-area">
+                    <div class="dropdown">
+                        <a href="login.html" class="login-btn dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                            <span>Log In</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html"><i class="bi bi-grid"></i>Dashboard</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=quizzes"><i class="bi bi-bar-chart"></i>Quiz Progress</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=community"><i class="bi bi-people"></i>Community Hub</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=profile"><i class="bi bi-person"></i>Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+<div id="home-intro-added">
+    <section class="hero home-intro-hero">
+        <div class="intro">
+
+            <div class="category-buttons">
+                <a class="category active" href="#myanmar">
+                    <i class="bi bi-exclamation-diamond"></i> Myanmar Situation
+                </a>
+                <a class="category" href="#statistic">
+                    <i class="bi bi-list-stars"></i> See Statistics
+                </a>
+            </div>
+
+            <h1 class="heading">Start your preparedness journey <br>with QuakeReady</h1>
+            <p>Discover simple ways to prepare for sudden natural disasters.</p>
+
+            <div class="info-bar">
+                <div class="info-item">
+                    <span class="info-label">OUR MISSION</span>
+                    <h3>Safer communities</h3>
+                    <p>Preparedness starts with knowledge.</p>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">RISK MAPPING</span>
+                    <h3>Know the risks</h3>
+                    <p>Explore vulnerable areas.</p>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">SAFETY GUIDES</span>
+                    <h3>Stay prepared</h3>
+                    <p>Practical disaster guidance.</p>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">OUR RESOURCES</span>
+                    <h3>Learn &amp; discover</h3>
+                    <p>Explore our educational materials.</p>
+                </div>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-content">
+                        <h2>Explore safety tips <br>and professional guidelines.</h2>
+                        <a href="safety.html" class="btn">
+                            Visit Safety Page
+                            <i class="button-arrow-icon bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-content">
+                        <h2>Learn with us <br>with fun educational videos.</h2>
+                        <a href="funtime.html" class="btn">
+                            Go to Fun Time
+                            <i class="button-arrow-icon bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+
+<section class="features-section" id="myanmar">
+    <div class="container">
+
+        <div class="d-none d-md-block">
+            <div class="row align-items-end mb-5">
+                <div class="col-8">
+                    <span class="text-accent fw-bold text-uppercase d-block mb-2">EARTHQUAKE CONCERN</span>
+                    <h1 class="myanmar display-4 fw-serif mb-4">Myanmar Situation</h1>
+                    <p class="opacity-75 col-lg-10 lead fs-6 mb-0">Why Myanmar is vulnerable to earthquakes</p>
+                </div>
+                <div class="col-4 text-end mb-2">
+                    <button class="slider-btn me-2 border-0" type="button" data-bs-target="#desktopCarousel" data-bs-slide="prev">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn border-0" type="button" data-bs-target="#desktopCarousel" data-bs-slide="next">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="desktopCarousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <!-- Slide 1 (Desktop) -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card feature-card">
+                                    <div class="icon-badge"><i class="bi bi-globe"></i></div>
+                                    <h4 class="fw-bold mb-3 fs-5">Active Region</h4>
+                                    <p class="text-muted small mb-4">Located in a geologically active region (Indian Plate interacts with the Burma microplate and the Eurasian Plate region).</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card feature-card">
+                                    <div class="icon-badge"><i class="bi bi-lightning-charge"></i></div>
+                                    <h4 class="fw-bold mb-3 fs-5">Tectonic Stress</h4>
+                                    <p class="text-muted small mb-4">Movement between tectonic plates builds up stress in the Earth's crust (suddenly release energy and cause earthquakes).</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card feature-card">
+                                    <div class="icon-badge"><i class="bi bi-exclamation-triangle"></i></div>
+                                    <h4 class="fw-bold mb-3 fs-5">Sagaing Fault</h4>
+                                    <p class="text-muted small mb-4">The Sagaing Fault (a major active fault - approximately 1,200 km through Myanmar).</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card feature-card">
+                                    <div class="icon-badge"><i class="bi bi-activity"></i></div>
+                                    <h4 class="fw-bold mb-3 fs-5">Major Faults</h4>
+                                    <p class="text-muted small mb-4">Kyaukkyan Fault and Kabaw Fault (other important faults) - can cause strong earthquakes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    //Myat Min thit//
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card feature-card">
+                                    <div class="icon-badge"><i class="bi bi-arrow-down-square"></i></div>
+                                    <h4 class="fw-bold mb-3 fs-5">Shallow Quakes</h4>
+                                    <p class="text-muted small mb-4">Some occur close to the Earth's surface (causing severe shaking and damage nearby).</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card feature-card">
+                                    <div class="icon-badge"><i class="bi bi-buildings"></i></div>
+                                    <h4 class="fw-bold mb-3 fs-5">Population Risk</h4>
+                                    <p class="text-muted small mb-4">Densely populated cities and towns may face greater risks (many people and buildings are exposed to earthquake hazards).</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card feature-card">
+                                    <div class="icon-badge"><i class="bi bi-hammer"></i></div>
+                                    <h4 class="fw-bold mb-3 fs-5">Weak Infrastructure</h4>
+                                    <p class="text-muted small mb-4">Poorly constructed buildings, older structures and weak infrastructure may be unable to withstand strong shaking.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card feature-card">
+                                    <div class="icon-badge"><i class="bi bi-layers"></i></div>
+                                    <h4 class="fw-bold mb-3 fs-5">Soil Conditions</h4>
+                                    <p class="text-muted small mb-4">Soft soil and loose sediments can increase earthquake shaking, causing greater damage to buildings and infrastructure.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-block d-md-none">
+            <div class="row align-items-center mb-4">
+                <div class="col-8">
+                    <span class="text-accent fw-bold text-uppercase d-block mb-1">LEARN MORE</span>
+                    <h2 class="h1 fw-serif mb-0">Features</h2>
+                </div>
+                <div class="col-4 text-end">
+                    <button class="slider-btn me-1 border-0" type="button" data-bs-target="#mobileCarousel" data-bs-slide="prev">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn border-0" type="button" data-bs-target="#mobileCarousel" data-bs-slide="next">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="col-12 mt-3">
+                    <p class="opacity-75 small mb-0">Why Myanmar is vulnerable to earthquakes </p>
+                </div>
+            </div>
+
+            <div id="mobileCarousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="card feature-card">
+                            <div class="icon-badge"><i class="bi bi-globe"></i></div>
+                            <h4 class="fw-bold mb-3 fs-5">Active Region</h4>
+                            <p class="text-muted small mb-4">Located in a geologically active region (Indian Plate interacts with the Burma microplate and the Eurasian Plate region).</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card feature-card">
+                            <div class="icon-badge"><i class="bi bi-lightning-charge"></i></div>
+                            <h4 class="fw-bold mb-3 fs-5">Tectonic Stress</h4>
+                            <p class="text-muted small mb-4">Movement between tectonic plates builds up stress in the Earth's crust (suddenly release energy and cause earthquakes).</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card feature-card">
+                            <div class="icon-badge"><i class="bi bi-exclamation-triangle"></i></div>
+                            <h4 class="fw-bold mb-3 fs-5">Sagaing Fault</h4>
+                            <p class="text-muted small mb-4">The Sagaing Fault (a major active fault - approximately 1,200 km through Myanmar).</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card feature-card">
+                            <div class="icon-badge"><i class="bi bi-activity"></i></div>
+                            <h4 class="fw-bold mb-3 fs-5">Major Faults</h4>
+                            <p class="text-muted small mb-4">Kyaukkyan Fault and Kabaw Fault (other important faults) - can cause strong earthquakes.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card feature-card">
+                            <div class="icon-badge"><i class="bi bi-arrow-down-square"></i></div>
+                            <h4 class="fw-bold mb-3 fs-5">Shallow Quakes</h4>
+                            <p class="text-muted small mb-4">Some occur close to the Earth's surface (causing severe shaking and damage nearby).</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card feature-card">
+                            <div class="icon-badge"><i class="bi bi-buildings"></i></div>
+                            <h4 class="fw-bold mb-3 fs-5">Population Risk</h4>
+                            <p class="text-muted small mb-4">Densely populated cities and towns may face greater risks (many people and buildings are exposed to earthquake hazards).</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card feature-card">
+                            <div class="icon-badge"><i class="bi bi-hammer"></i></div>
+                            <h4 class="fw-bold mb-3 fs-5">Weak Infrastructure</h4>
+                            <p class="text-muted small mb-4">Poorly constructed buildings, older structures and weak infrastructure may be unable to withstand strong shaking.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card feature-card">
+                            <div class="icon-badge"><i class="bi bi-layers"></i></div>
+                            <h4 class="fw-bold mb-3 fs-5">Soil Conditions</h4>
+                            <p class="text-muted small mb-4">Soft soil and loose sediments can increase earthquake shaking, causing greater damage to buildings and infrastructure.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Causes of Earthquake (WMT) -->
+
+    <section class="wmt-section" id="causes">
+        <div class="container">
+            <div class="mb-5" data-aos="fade-up">
+                <span class="wmt-tag">Understanding Earthquakes</span>
+                <h1 class="wmt-heading mt-3">What Causes Earthquakes?</h1>
+                <p class="wmt-description">Earthquakes happen when energy is suddenly released beneath the Earth's surface. Most occur naturally,but certain human activities can also trigger earthquakes.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="wmt-card natural-card h-100">
+                        <div>
+                            <span class="wmt-tag">Primary Cause</span>
+                            <h3 class="mt-3">Natural Earthquakes</h3>
+                            <p> Tectonic plates move slowly, building stress along faults. When rocks suddenly slip,the released energy causes the ground to shake.</p>
+                            <p>Volcanic activity can also cause earthquakes when magma moves beneath the Earth's surface.</p>
+                        </div>
+                        <div class="earth-illustration">
+                            <img src="" alt="">
+                            <span class="illustration-label">Tectonic Movement</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="d-flex flex-column gap-4 h-100">
+                        <div class="wmt-card small-card flex-fill" data-aos="fade-left">
+                            <div class="icon-box">
+                                <i class="bi bi-hammer"></i>
+                            </div>
+                            <h3>Human-Induced Earthquakes</h3>
+                            <p> Mining activities, large dams, and underground fluid injection can sometimes change pressure beneath the Earth's surface and trigger earthquakes.</p>
+                        </div>
+                        <div class="wmt-card small-card flex-fill" data-aos="fade-left">
+                            <div class="icon-box">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <h3>Earthquakes in Myanmar</h3>
+                            <p>Myanmar is located near active fault lines. The Sagaing Fault is one of the country's major sources of earthquake hazards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-note mt-4" data-aos="fade-up">
+                <i class="bi bi-info-circle me-2"></i>
+                Most major earthquakes in Myanmar are caused by
+                natural tectonic movement rather than human activities.
+            </div>
+        </div>
+    </section>
+    <section class="impact-section wmt-section" id="impacts">
+        <div class="container">
+
+            <div class="mb-5" data-aos="fade-up">
+                <span class="wmt-tag">Understanding the Consequences</span>
+                <h1 class="wmt-heading mt-3">The Impact of Earthquakes</h1>
+                <p class="wmt-description">Earthquakes can damage buildings, cause injuries, affect families, and interrupt essential services. Their effects can continue long after the shaking stops.</p>
+            </div>
+            <div class="row g-4">
+
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="wmt-card featured-impact h-100">
+
+                        <div>
+                            <span class="wmt-tag">Physical Damage</span>
+                            <h3 class="mt-3">Buildings & Infrastructure</h3>
+                            <p> Strong shaking can damage or destroy homes, schools, hospitals, roads, and bridges. Poorly constructed buildings are especially vulnerable to earthquake damage.</p>
+                        </div>
+                        <div class="building-illustration"><p>During the 2025 Myanmar earthquake, many buildings were damaged, leaving families without safe homes. This highlights the importance of earthquake-resistant construction.</p></div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row g-4">
+
+                        <div class="col-md-6" data-aos="zoom-in">
+                            <div class="wmt-card impact-card h-100">
+                                <div class="icon-box">
+                                    <i class="bi bi-heart-pulse"></i>
+                                </div>
+                                <h3>Injuries</h3>
+                                <p>Falling objects and damaged buildings can cause injuries. Damaged hospitals may also delay medical treatment.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="zoom-in">
+                            <div class="wmt-card impact-card h-100">
+                                <div class="icon-box">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <h3>Casualties</h3>
+                                <p>Severe earthquakes can cause loss of life, especially in areas with vulnerable buildings and limited emergency services.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="zoom-in">
+                            <div class="wmt-card impact-card h-100">
+                                <div class="icon-box">
+                                    <i class="bi bi-house"></i>
+                                </div>
+                                <h3>Household Disruption</h3>
+                                <p>Families may lose their homes and access to clean water, electricity, food,communication, and other basic needs.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="zoom-in">
+                            <div class="wmt-card impact-card h-100">
+                                <div class="icon-box">
+                                    <i class="bi bi-mortarboard"></i>
+                                </div>
+                                <h3>Daily Life & Education</h3>
+                                <p>Damaged schools, workplaces, and roads can interrupt education, employment, transportation, and daily activities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="source-text mt-4">Sources:
+                <a href="https://www.usgs.gov/programs/earthquake-hazards">USGS</a>,
+                <a href="https://www.unicef.org/myanmar">UNICEF Myanmar</a>
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Seismic Snapshot Section (MNT) -->
+    <div class="seismic-snapshot">
+        <header class="report-header">
+            <span class="tag">SCIENTIFIC DATA</span>
+            <h1 class="heading">Myanmar Seismic Snapshot</h1>
+        </header>
+        <div class="row d-flex justify-content-center">
+            <!-- Left side -->
+            <div class="col-lg-7" data-aos="fade-up-right">
+                <div class="seismic-card">
+                    <div class="cities-content">
+                        <span class="tag">MAJOR SEISMIC ZONE</span>
+                        <div class="city-img">
+                            <div class="row g-3">
+
+                                <div class="col-6">
+                                    <div class="city-photo">
+                                        <img src="image/sagaing.jpg" alt="Sagaing">
+                                        <span class="city-label">Sagaing</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="city-photo">
+                                        <img src="image/mdy.jpg" alt="Mandalay">
+                                        <span class="city-label">Mandalay</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="city-photo">
+                                        <img src="image/pyin-oo-lwin.jpg" alt="Pyin Oo Lwin">
+                                        <span class="city-label">Pyin Oo Lwin</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="city-photo">
+                                        <img src="image/kyatse.jpg" alt="Kyaukse">
+                                        <span class="city-label">Kyaukse</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="city-photo">
+                                        <img src="image/shwebo.jpg" alt="Shwebo">
+                                        <span class="city-label">Shwebo</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <h1 class="card-title">Cities Nearby Sagaing Fault Line</h1>
+                        <p><strong>A severe earthquake can influence a high possible chance of earthquake hazards</strong> to these cities. It is important to understand the risks in these areas when it comes to earthquake-resistant infrastructure, emergency preparedness, and public awareness throughout the region.</p>
+                    </div>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#map">Check Map <i class="button-arrow-icon bi bi-arrow-up-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Right side -->
+            <div class="col-lg-5 my-2" data-aos="fade-left">
+                <div class="scrollable">
+                    <div class="seismic-card-mini">
+                        <div class="mb-2">
+                            <span class="tag">TOTAL EVENTS</span>
+                        </div>
+                        <p class="card-caption">In the past decade (2016 - 2025)</p>
+                        <div class="stat-display">
+                            <span class="stat-num">1,384</span>
+                            <span class="stat-unit">earthquakes</span>
+                        </div>
+                        <p class="card-caption">Magnitude 4.0 or higher<br>Within <strong>186 mi (300 km)</strong> of Myanmar</p>
+                    </div>
+
+                    <div class="seismic-card-mini">
+                        <div class="mb-2">
+                            <span class="tag">AVERAGE COUNT</span>
+                        </div>
+                        <p class="card-caption">Based on data from the past decade</p>
+                        <div class="stat-display">
+                            <span class="stat-num">138</span>
+                            <span class="stat-unit">earthquakes/year</span>
+                        </div>
+                        <p class="card-caption">11 earthquakes a month.<br>Once every 2 days.</p>
+                    </div>
+
+                    <div class="seismic-card-mini">
+                        <div class="mb-2">
+                            <span class="tag">STRONGEST EARTHQUAKE</span>
+                        </div>
+                        <p class="card-caption">On March 28th, 2025</p>
+                        <div class="stat-display">
+                            <span class="stat-num">7.7</span>
+                            <span class="stat-unit">magnitude</span>
+                        </div>
+                        <p class="card-caption">Strongest one since 2000.<br>Mostly impacted Mandalay city.</p>
+                    </div>
+
+                    <div class="seismic-card-mini">
+                        <div class="mb-2">
+                            <span class="tag">MOST ACTIVE</span>
+                        </div>
+                        <p class="card-caption">Year with most earthquakes</p>
+                        <div class="stat-display">
+                            <span class="stat-num">2025</span>
+                        </div>
+                        <p class="card-caption">Compared to other years since 2000.<br>142 M4+ earthquakes recorded.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- modal start -->
+                <div class="modal fade" data-bs-backdrop="static" id="map">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header pe-5">
+                                <div class="modal-heading">
+                                    <h2 class="modal-title">Map of Myanmar</h2>
+                                    <p class="card-caption">Discover geographic information by clicking on a blue dot</p>
+                                </div>
+                                <div class="btn-close" data-bs-dismiss="modal"></div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 seismic-card map-img">
+                                        <img src="image/regions-of-myanmar-map.webp" alt="map">
+
+                                        <!-- LOCATION DOTS -->
+                                        <a href="#sagaing" class="hotspot" style="left: 42%; top: 36%;"></a>
+                                        <a href="#mdy" class="hotspot" style="left: 44%; top: 35.5%"></a>
+                                        <a href="#pol" class="hotspot" style="left: 48%; top: 35%;"></a>
+                                        <a href="#kyautse" class="hotspot" style="left: 47%; top: 37%;"></a>
+                                        <a href="#shwebo" class="hotspot" style="left: 41%; top: 33%;"></a>
+                                        <a href="#myitkyina" class="hotspot" style="left: 56%; top: 19%;"></a>
+                                        <a href="#hakha" class="hotspot" style="left: 19.5%; top: 32.5%;"></a>
+                                        <a href="#magway" class="hotspot" style="left: 33%; top: 44.5%;"></a>
+                                        <a href="#bago" class="hotspot" style="left: 48.5%; top: 57.7%;"></a>
+                                        <a href="#pathein" class="hotspot" style="left: 31%; top: 59.5%;"></a>
+                                        <a href="#ygn" class="hotspot" style="left: 43.6%; top: 59.7%;"></a>
+                                        <a href="#hpa-an" class="hotspot" style="left: 58.5%; top: 59.7%;"></a>
+                                        <a href="#mlm" class="hotspot" style="left: 58.5%; top: 61%;"></a>
+                                        <a href="#tgg" class="hotspot" style="left: 52.1%; top: 41.2%;"></a>
+                                        <a href="#loikaw" class="hotspot" style="left: 54%; top: 46.6%;"></a>
+                                        <a href="#npt" class="hotspot" style="left: 44.4%; top: 46.5%;"></a>
+                                        <a href="#akjab" class="hotspot" style="left: 15%; top: 44%;"></a>
+                                        <a href="#tavoy" class="hotspot" style="left: 63%; top: 72.5%;"></a>
+
+                                        <!-- Sagaing -->
+                                        <div class="city-info-card" id="sagaing">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Sagaing</h3>
+                                            <p id="card-caption">The major city of Sagaing region, Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Located on the Irrawaddy River, 20 km to the south-west of Mandalay on the opposite bank of the river.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Sits directly astride the Sagaing Fault, one of the most active and dangerous continental strike-slip faults in Southeast Asia.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Mandalay -->
+                                        <div class="city-info-card" id="mdy">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Mandalay</h3>
+                                            <p id="card-caption">Former royal capital in northern Myanmar and major city of Mandalay region.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Located in the central Dry Zone of Myanmar on the east bank of the Irrawaddy River.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Direct location along the active Sagaing Fault, one of the most active and dangerous continental strike-slip faults in Southeast Asia.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Pyin Oo Lwin -->
+                                        <div class="city-info-card" id="pol">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Pyin Oo Lwin</h3>
+                                            <p id="card-caption">Also known as Maymyo, is a hill town in the Mandalay Region of Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">A scenic high-altitude hill station located approximately 67 kilometers east of Mandalay at an elevation of 1,070 metres.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Closely tied to historical earthquakes, the Kyaukkyan Fault, and regional shaking from the active Sagaing Fault.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Kyautse -->
+                                        <div class="city-info-card" id="kyautse">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Kyautse</h3>
+                                            <p id="card-caption">Capital of Kyaukse District in the Mandalay Region of central Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Lies directly on Zawgyi River and about 25 to 30 miles (40 to 48 km) south of Mandalay</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Directly adjacent to the Sagaing Fault and the nearby Kyaukkyan Fault. Area is classified under Zone IV (Severe) and Zone V (Destructive).</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Shwebo -->
+                                        <div class="city-info-card" id="shwebo">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Shwebo</h3>
+                                            <p id="card-caption">A city in Sagaing Region, Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">110 km north-west of Mandalay between the Irrawaddy and the Mu rivers.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Major seismic significance due to their direct location along or adjacent to the active Sagaing Fault and the broader convergent boundary of the Indo-Burma tectonic zone.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Myitkyina -->
+                                        <div class="city-info-card" id="myitkyina">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Myitkyina</h3>
+                                            <p id="card-caption">Capital city of Kachin State in Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Situated 1,480 kilometers (920 miles) north of Yangon and 785 kilometers (488 miles) north of Mandalay, on the west bank of the Ayeyarwady River.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">A risk zone along the Sagaing Fault Zone, one of the most active continental transform faults in Southeast Asia.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Hakha -->
+                                        <div class="city-info-card" id="hakha">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Hakha</h3>
+                                            <p id="card-caption">Capital city of Chin State in western Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Situated on a U-shaped mountain plateau at over 1,867 to 1,890 meters (6,125+ feet) above sea level near Mount Rung (Rung Tlang).</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Accommodates the highly oblique collision and convergence between the Indian Plate and the Eurasian Plate.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Magway -->
+                                        <div class="city-info-card" id="magway">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Magway</h3>
+                                            <p id="card-caption">Capital city of the Magway Region in central Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Situated on the eastern banks of the Irrawaddy (Ayeyarwaddy) River.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Sits within a highly active tectonic and fault-bounded zone influenced by the Sagaing Fault.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Bago -->
+                                        <div class="city-info-card" id="bago">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Bago</h3>
+                                            <p id="card-caption">Formerly known as Hanthawaddy, is the capital of the Bago Region in Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Located 91 kilometres north-east of Yangon.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">High-risk seismic zone centered directly along major active fault systems capable of producing catastrophic magnitude 7.0+ earthquakes.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Pathein -->
+                                        <div class="city-info-card" id="pathein">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Pathein</h3>
+                                            <p id="card-caption">Largest city and capital of the Ayeyarwady Region in Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Located 190 km (120 mi) west of Yangon on the banks of the Pathein River.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Moderate level of local seismic activity combined with a high long-term earthquake potential score relative to regional fault dynamics.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Yangon -->
+                                        <div class="city-info-card" id="ygn">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Yangon</h3>
+                                            <p id="card-caption">Formerly known as Rangoon, is the largest city in Myanmar</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Located in Lower Myanmar on the eastern bank of the Yangon River (the eastern mouth of the Irrawaddy River).</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Sits roughly 35 to 40 kilometers west of the active Sagaing Fault and rests on a soft, water-saturated sedimentary basin that can amplify ground shaking.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Hpa-an -->
+                                        <div class="city-info-card" id="hpa-an">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Hpa-an</h3>
+                                            <p id="card-caption">Large city in southeastern Myanmar and the capital and largest city of Kayin State. </p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">About 6 to 8 hours by road from Yangon and 3 hours from the Myawaddy border crossing with Thailand.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Low seismic significance compared to the high-risk central and northern parts of the country.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Mawlamyaing -->
+                                        <div class="city-info-card" id="mlm">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Mawlamyine</h3>
+                                            <p id="card-caption">Capital of Mon State and the fourth-largest city in Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Located about 300 kilometers southeast of Yangon at the mouth of the Thanlwin (Salween) River.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">A moderate level of seismic activity, sitting relatively apart from the country's most volatile direct surface fault line.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Taunggyi -->
+                                        <div class="city-info-card" id="tgg">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Taunggyi</h3>
+                                            <p id="card-caption">Capital and largest city of Shan State, Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Situated on the eastern mountains of Myanmar at an elevation of 4,712 feet above sea level.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Sits near major active fault systems in a structurally active region of Myanmar.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Loi Kaw -->
+                                        <div class="city-info-card" id="loikaw">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Loi-kaw</h3>
+                                            <p id="card-caption">Largest city and the capital of Karenni State, in Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Located in the Karen Hills area, near the State's northern tip, just above an embayment on the Pilu River.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">High level of background seismic activity with an average of roughly 131 earthquakes per year (mostly minor or micro-earthquakes).</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Nay Pyi Taw -->
+                                        <div class="city-info-card" id="npt">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Nay Pyi Taw</h3>
+                                            <p id="card-caption">Current modern administrative capital of Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Situated in the central region of the country between the Bago Yoma and Shan Yoma (Shan Hills) mountain ranges.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Sits directly on the active, 1,200-kilometer-long Sagaing Fault.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Akjab -->
+                                        <div class="city-info-card" id="akjab">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Sittwe</h3>
+                                            <p id="card-caption">Formerly known as Akjab, is the capital of Rakhine State in western Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Situated on an estuarial island at the confluence of the Kaladan, Mayu, and Lay Mro rivers where they empty into the Bay of Bengal.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Holds important seismic significance due to its position within the active Indo-Burman subduction and deformation margin.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- Tavoy -->
+                                        <div class="city-info-card" id="tavoy">
+                                            <span class="tag">GEOGRAPHIC FACTS</span>
+                                            <h3 class="card-title">Dawei</h3>
+                                            <p id="card-caption">Formally known as Tavoy, is capital of the Tanintharyi Region in southeastern Myanmar.</p>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-geo-alt city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Geographical significance</strong>
+                                                    <p id="card-caption">Located located about 614 km southeast of Yangon on the Dawei River.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="city-detail">
+                                                <i class="bi bi-activity city-card-icon"></i>
+                                                <div class="card-info">
+                                                    <strong>Seismic significance</strong>
+                                                    <p id="card-caption">Positioning on the Burma microplate near the highly active tectonic transition zone between the Sumatra-Andaman subduction zone to the west and the southern extremities of mainland Myanmar's major fault lines.</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end"><a href="#map" class="btn close-btn">Close</a></div>
+                                        </div>
+
+                                        <!-- citation -->
+                                        <p class="card-caption">Photo from <i><a href="https://www.worldatlas.com/maps/myanmar"  target="_blank" class="card-caption">The WorldAtlas</a></i></p>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- modal end -->
+            </div>
+    </div>
+    <div class="safety-guide">
+        <div class="row" data-aos="fade-right" data-aos-duration="1200">
+            <div class="col-lg-7">
+                <div class="options">
+                
+                    <div class="option" style="--optionBackground: url('image/indoors.jpg');">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="icon">
+                                <i class="bi bi-door-open"></i>
+                            </div>
+                            <div class="info">
+                                <div class="main">What do you do when an earthquake suddenly occurs indoors?</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="option" style="--optionBackground: url('image/outdoors.jpg');">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <div class="info">
+                                <div class="main">What to do when an earthquake happens while you're outdoors?</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="option" style="--optionBackground: url('image/crowded.jpg');">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <div class="info">
+                                <div class="main">How do you react to an earthquake in difficult crowded areas?</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="option" style="--optionBackground: url('image/stadium.jpg');">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="icon">
+                                <i class="bi bi-joystick"></i>
+                            </div>
+                            <div class="info">
+                                <div class="main">What's the best approach to face an earthquake in stadiums?</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="option" style="--optionBackground: url('image/in-car.jpg');">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="icon">
+                                <i class="bi bi-car-front"></i>
+                            </div>
+                            <div class="info">
+                                <div class="main">How do you react to an earthquake while in the vehicle?</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="col-lg-5">
+                <header class="safety-header">
+                    <div class="div">
+                        <span class="tag">EARTHQUAKE RESPONSE</span>
+                        <h1 class="heading">Situational Disaster Scenarios</h1>
+                        <p class="card-caption">Check out the best approach methods to use when facing unexpected sudden earthquake occurrence for your safety at our website.</p>
+                    </div>
+                   <a href="Safety.html" class="btn">Go To Page<i class="button-arrow-icon bi bi-arrow-up-right"></i></a>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistic Section (MNT) -->
+    <div class="statistic-container" id="statistic">
+
+        <header class="report-header">
+            <span class="tag">MAJOR MYANMAR DISASTER EVENT</span>
+            <h1 class="heading">2025 Central Myanmar Earthquake Report</h1>
+        </header>
+
+        <div class="info-display">
+            <div class="row g-4 align-items-stretch">
+
+                <!-- Left side -->
+                <div class="col-lg-5 d-flex flex-column" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="stat-card h-100 d-flex flex-column">
+                        <div class="panel-heading">
+                            <div>
+                                <span class="tag">GEOGRAPHIC OVERVIEW</span>
+                                <h4 class="card-title">Earthquake Intensity</h4>
+                            </div>
+                        </div>
+                        <!-- Map image -->
+                        <div class="stat-map">
+                            <img src="image/earthquake-map.webp" alt="Map of the earthquake" class="img-fluid w-100">
+                        </div>
+                        <p class="card-caption">Photo from <i><a href="https://www.thenewhumanitarian.org/analysis/2025/05/15/myanmar-depth-slow-earthquake-response-underlines-need-overhaul-long-flawed"  target="_blank">The New Humanitarian. (2025, May 16)."Myanmar in-depth: Slow earthquake response underlines need to overhaul long-flawed international aid efforts".</a></i></p>
+                    </div>
+                </div>
+
+                <!-- Right side -->
+                <div class="col-lg-7">
+                    <div class="row g-4">
+
+                        <!-- Report overview -->
+                        <div class="col-12" data-aos="fade-down" data-aos-duration="1200">
+                            <div class="stat-card">
+                                <div class="panel-heading">
+                                    <span class="tag">DISASTER REPORT OVERVIEW</span>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="overview-item">
+                                            <span class="overview-icon">
+                                                <i class="bi bi-calendar3"></i>
+                                            </span>
+                                            <p>
+                                                <strong>Date &amp; Time</strong>
+                                                <span>March 28, 2025 • 12:50 PM</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="overview-item">
+                                            <span class="overview-icon">
+                                                <i class="bi bi-speedometer2"></i>
+                                            </span>
+                                            <p>
+                                                <strong>Magnitude</strong>
+                                                <span>7.7 Mw</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="overview-item">
+                                            <span class="overview-icon">
+                                                <i class="bi bi-geo"></i>
+                                            </span>
+                                            <p>
+                                                <strong>Epicenter</strong>
+                                                <span>Near Sagaing, close to Mandalay</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="overview-item">
+                                            <span class="overview-icon">
+                                                <i class="bi bi-layers"></i>
+                                            </span>
+                                            <p>
+                                                <strong>Focal Depth</strong>
+                                                <span>Approximately 10 km</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Statistic cards -->
+                        <div class="col-md-6">
+                            <div class="stat-card" data-aos="fade-down-right" data-aos-duration="1200">
+                                <div class="panel-heading">
+                                    <span class="tag">IMPACTED POPULATION</span>
+                                    <span class="stat-icon">
+                                        <i class="bi bi-people"></i>
+                                    </span>
+                                </div>
+                                <p class="card-caption">Estimated</p>
+                                <div class="stat-number">
+                                    <span class="counter" data_ceil="17">00</span><span class="stat-plus">Million+</span>
+                                </div>
+                                <p class="card-caption">People affected</p>
+                                <p class="card-caption">Around 31% of Myanmar's population based on 2025 population data.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="stat-card" data-aos="fade-down-left" data-aos-duration="1200">
+                                <div class="panel-heading">
+                                    <span class="tag">CONFIRMED DEATHS</span>
+                                    <span class="stat-icon">
+                                        <i class="bi bi-heart-pulse"></i>
+                                    </span>
+                                </div>
+                                <p class="card-caption">Reported</p>
+                                <div class="stat-number">
+                                    <span class="counter" data_ceil="5000">00</span><span class="stat-plus">+</span>
+                                </div>
+                                <p class="card-caption">people</p>
+                                <p class="card-caption">Mandalay and Sagaing regions were among the hardest-hit areas. </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="stat-card" data-aos="fade-up-right" data-aos-duration="1200">
+                                <div class="panel-heading">
+                                    <span class="tag">REPORTED INJURIES</span>
+                                    <span class="stat-icon">
+                                        <i class="bi bi-bandaid"></i>
+                                    </span>
+                                </div>
+                                <p class="card-caption">Reported</p>
+                                <div class="stat-number">
+                                    <span class="counter" data_ceil="11000">00</span><span class="stat-plus">+</span>
+                                </div>
+                                <p class="card-caption">people injured</p>
+                                <p class="card-caption">Many residents had little time to respond to the unexpected shaking.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="stat-card" data-aos="fade-up-left" data-aos-duration="1200">
+                                <div class="panel-heading">
+                                    <span class="tag">AFFECTED TOWNSHIPS</span>
+                                    <span class="stat-icon">
+                                        <i class="bi bi-buildings"></i>
+                                    </span>
+                                </div>
+                                <p class="card-caption">Reported</p>
+                                <div class="stat-number">
+                                    <span class="counter" data_ceil="57">00</span>
+                                </div>
+                                <p class="card-caption">townships</p>
+                                <p class="card-caption">Out of 330 townships nationwide, according to the sample figures.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <hr>
+        <p class="card-caption">All reports from <a href="https://myanmar.un.org/en/292159-situation-report-2-earthquake-central-myanmar-2025"  target="_blank">United Nations Myanmar. (2025, April 05). "Situation Report #2: Earthquake in Central Myanmar 2025".</a></p>
+
+    </div>
+
+    <!-- Footer KPPT -->
+     <footer class="website-footer">
+        <div class="footer-container">
+            <div class="row g-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="col-12 col-md-6 col-lg-4 footer-column">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="image/Screenshot 2026-11-04 213028.png" alt="logo" style="background-color: #eef7f6;">
+                        </div>
+                        <h3>EarthWise</h3>
+                    </div>
+
+                    <p class="footer-description">Explore global seismic history, master life-saving safety practices, and access our interactive emergency preparedness checklists</p>
+
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
+                        <span>location: Zaing North 3 Street, Bago, Myanmar</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
+                        <span>phone no: 09684578048</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
+                        <span>gmail: laminmaungjjboy@gmail.com</span>
+                    </div>
+
+                    <h4 class="social-heading">social media</h4>
+
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@Earthwise005-e4o" class="youtube" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://t.me/earthwise005" class="telegram" aria-label="Telegram">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@earthwise005" class="tiktok" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2 footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Earthquake.html">Earthquakes</a></li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">Safety Hub</a>
+                            <button class="footer-dropdown-button" type="button"data-bs-toggle="dropdown" aria-expanded="false" aria-label="Safety Hub submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item" href="Safety.html">Safety</a></li>
+                                <li><a class="dropdown-item" href="preparedness.html">Preparedness</a></li>
+                                <li><a class="dropdown-item" href="risk-reduction.html">Risk Reduction</a></li>
+                                <li><a class="dropdown-item" href="funtime.html">Fun Time</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">About Us</a>
+                            <button class="footer-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="About Us submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Goal</a></li>
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Mission</a></li>
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Vision</a></li>
+                                <li><a class="dropdown-item" href="developers.html">Developers</a></li>
+                                <li><a class="dropdown-item" href="contact_us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">Log In</a>
+                            <button class="footer-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item login-required" href="dashboard.html">Dashboard</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=quizzes">Quiz Progress</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=community">Community Hub</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=profile">Profile</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="signup.html" class="footer-signup-link"><i class="bi bi-person-plus"></i>Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3 class="footer-heading">Emergency Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="preparedness.html">Emergency Action Guide</a></li>
+                        <li><a href="preparedness.html">Emergency Checklist</a></li>
+                        <li><a href="Safety.html">Official Safety Guidelines</a></li>
+                        <li><a href="https://borgenproject.org/myanmar-after-the-earthquake/">Relief Organisations</a></li>
+                        <li><a class="login-required" href="dashboard.html?section=community">Community support</a></li>
+                    </ul>
+                    <div class="newsletter">
+                        <h3 class="footer-heading">Stay Connected</h3>
+                        <form class="newsletter-form" action="signup.html" method="get">
+                            <input type="email" class="newsletter-input" placeholder="Email address..." aria-label="Email address"required>
+                            <button type="submit" class="signup-button">Sign Up</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3 class="footer-heading">About &amp; Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="goal_mission_vision.html">Our Mission &amp; Vision</a></li>
+                        <li><a href="developers.html">Our Developers</a></li>
+                        <li><a href="resources.html">Sources &amp; References</a></li>
+                        <li><a href="pdf/EarthWise Privacy Policy.pdf">Privacy Policy</a></li>
+                        <li><a href="pdf/EarthWise Terms & Conditions.pdf">Terms &amp; Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Earthwise | Year 9 Fuchsia</p>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="loginRequiredModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content login-required-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Login Required</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <p>Please log in or create an account to access this feature.</p>
+                <div class="d-flex gap-2 mt-4">
+                    <a href="login.html" class="btn modal-login-btn">Log In</a>
+                    <a href="signup.html" class="btn modal-signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- External JavaScript -->
+    <script src="index.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Login externel js -->
+     <script src="login-check.js"></script>
+</body>
+</html>
