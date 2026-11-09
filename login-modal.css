@@ -1,0 +1,9 @@
+/* Login Required popup only */
+.login-required-modal { border: 1px solid #e1eae5; border-radius: 16px; padding: 15px; font-family: 'DM Sans', sans-serif; }
+.login-required-modal .modal-title { font-family: 'Manrope', sans-serif; color: #176B5B; font-size: 22px; }
+.login-required-modal p { font-size: 14px; color: #728a83; line-height: 1.7; }
+.modal-login-btn, .modal-signup-btn { flex: 1; padding: 11px; border-radius: 8px; font-size: 16px; font-weight: 600; }
+.modal-login-btn { background: #2d8a76; color: white; }
+.modal-login-btn:hover { background: #176b5b; color: white; }
+.modal-signup-btn { background: white; color: #2d8a76; border: 1px solid #2d8a76; }
+.modal-signup-btn:hover { background: #edf7f5; color: #176b5b; }
