@@ -1,3 +1,4 @@
+
 let points = Number(localStorage.getItem("points")) || 0;
 let quizCount = Number(localStorage.getItem("quizCount")) || 0;
 let donationCount = Number(localStorage.getItem("donationCount")) || 0;
@@ -27,6 +28,7 @@ function updateProfile() {
 
     let recordBox = document.getElementById("activityRecord");
     recordBox.innerHTML = "";
+
     if (records.length === 0) {
         recordBox.textContent = "No activity yet";
     } else {
@@ -65,6 +67,7 @@ function addRecord(message) {
             year: "numeric"
         })
     };
+
     records.unshift(record);
     saveData();
     updateProfile();
@@ -92,8 +95,8 @@ function updateQuizResults() {
         });
 
         let percent = Math.round(total / 3);
-        let percentId = name === "science" ? "sciencePercent" : name + "Percent";
-        let barId = name === "science" ? "scienceBar" : name + "Bar";
+        let percentId = name + "Percent";
+        let barId = name + "Bar";
 
         document.getElementById(percentId).textContent = percent + "%";
         document.getElementById(barId).style.width = percent + "%";
@@ -227,7 +230,7 @@ function displayPost(post) {
     author.textContent = post.name;
 
     let category = document.createElement("small");
-    category.textContent = typeNames[post.type];
+    category.textContent = typeNames[post.type] || "Personal blogs";
 
     info.appendChild(author);
     info.appendChild(category);
@@ -245,53 +248,96 @@ function displayPost(post) {
     card.appendChild(content);
     container.prepend(card);
 }
+
 posts.forEach(function(post) {
     displayPost(post);
 });
 
 document.getElementById("postForm").addEventListener("submit", function(event) {
     event.preventDefault();
+
     let type = document.getElementById("postType").value;
     let title = document.getElementById("postTitle").value.trim();
     let content = document.getElementById("postText").value.trim();
     let name = document.getElementById("profileName").textContent;
+
     if (title === "" || content === "") return;
+
     let post = {
         type: type,
         title: title,
         text: content,
         name: name
     };
+
     posts.push(post);
     postCount++;
+
     displayPost(post);
     addRecord("Uploaded a post: " + title);
+
     this.reset();
     document.querySelector('[data-filter="' + type + '"]').click();
+
     alert("Post uploaded successfully!");
 });
 
-document.getElementById("profileForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    let name = document.getElementById("fullName").value.trim();
-    document.getElementById("profileName").textContent = name || "User";
-    let profile = {
-        name: name,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        description: document.getElementById("description").value
-    };
-    localStorage.setItem("profile", JSON.stringify(profile));
-    alert("Profile saved!");
-});
+function updateAccountDisplay(name) {
+    let initials = name.trim()
+        .split(/\s+/)
+        .slice(0, 2)
+        .map(function(word) {
+            return word.charAt(0);
+        })
+        .join("")
+        .toUpperCase();
+
+    document.getElementById("profileName").textContent = name;
+    document.getElementById("profileAvatar").textContent = initials || "U";
+    document.getElementById("sidebarName").textContent = name;
+    document.getElementById("sidebarAvatar").textContent = initials || "U";
+}
 
 let savedProfile = JSON.parse(localStorage.getItem("profile") || "{}");
 
-document.getElementById("fullName").value = savedProfile.name || "";
-document.getElementById("profileName").textContent = savedProfile.name || "User";
-document.getElementById("email").value = savedProfile.email || "";
+let userName = savedProfile.name ||
+    localStorage.getItem("earthwiseName") || "User";
+
+let userEmail = savedProfile.email ||
+    localStorage.getItem("earthwiseEmail") || "";
+
+document.getElementById("fullName").value = userName;
+document.getElementById("email").value = userEmail;
 document.getElementById("phone").value = savedProfile.phone || "";
 document.getElementById("description").value = savedProfile.description || "";
+
+updateAccountDisplay(userName);
+
+document.getElementById("profileForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("fullName").value.trim() || "User";
+    let email = document.getElementById("email").value.trim();
+
+    let profile = {
+        name: name,
+        email: email,
+        phone: document.getElementById("phone").value,
+        description: document.getElementById("description").value
+    };
+
+    localStorage.setItem("profile", JSON.stringify(profile));
+    localStorage.setItem("earthwiseName", name);
+    localStorage.setItem("earthwiseEmail", email);
+
+    updateAccountDisplay(name);
+
+    alert("Profile saved!");
+});
+
+document.getElementById("logoutBtn").addEventListener("click", function() {
+    sessionStorage.removeItem("loggedIn");
+});
 
 function showGoals() {
     let list = document.getElementById("goalList");
@@ -340,10 +386,7 @@ showGoals();
 
 document.querySelector('[data-filter="all"]').click();
 
-// Open dashboard sections from the login dropdown
-
 document.addEventListener("DOMContentLoaded", function() {
-
     const params = new URLSearchParams(window.location.search);
     const section = params.get("section");
 
@@ -356,5 +399,4 @@ document.addEventListener("DOMContentLoaded", function() {
             bootstrap.Tab.getOrCreateInstance(tab).show();
         }
     }
-
 });
