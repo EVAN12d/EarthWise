@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarthWise | Safety Guides</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; background: #edf7f5; color: #245350; font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, h4, h5 { font-family: 'Manrope', sans-serif; }
+        .earthquake-hero-wrapper {
+            position: relative;
+            min-height: 500px;
+            overflow: hidden;
+            padding: 75px 0;
+        }
+        .hero-bg-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(20,55,51,0.96) 0%, rgba(25,70,63,0.9) 45%, rgba(25,70,63,0.5) 100%);
+        }
+        .hero-content { position: relative; z-index: 2; color: white; }
+        .hero-tagline {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #b5e2da;
+            margin-bottom: 18px;
+        }
+        .hero-title {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 22px;
+            color: white;
+        }
+        .hero-desc {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #e0efeb;
+            max-width: 500px;
+            margin-bottom: 28px;
+        }
+        .btn-safety {
+            display: inline-block;
+            background: #b5e2da;
+            color: #194c42;
+            padding: 13px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .btn-safety:hover { background: #d5f0e9; color: #194c42; }
+        .hero-info-card {
+            background: rgba(15,42,39,0.8);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 310px;
+            color: white;
+        }
+        .hero-info-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: rgba(181,226,218,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .hero-info-icon i { color: #b5e2da; font-size: 27px; }
+        .hero-info-card h5 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+        .hero-info-card p { color: #d5e8e3; font-size: 13px; line-height: 1.7; margin-bottom: 20px; }
+        .hero-info-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 17px;
+            color: #b5e2da;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .guides-section { padding: 80px 0; }
+        .section-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #2d8a76;
+            margin-bottom: 12px;
+        }
+        .section-title-teal {
+            color: #176b5b;
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        .section-description { color: #526c63; font-size: 15px; line-height: 1.7; }
+        .guide-card {
+            background: #ffffff;
+            border: 2px solid #b5cfc7;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: none;
+            transition: border-color 0.3s ease;
+        }
+        .guide-card:hover {
+            border-color: #7eafa1;
+            box-shadow: none;
+        }
+        .guide-card-top {
+            height: 190px;
+            background: #e2eee9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .guide-card-top img { max-width: 100%; max-height: 165px; object-fit: contain; }
+        .guide-card-body { padding: 25px; }
+        .badge-before {
+            display: inline-block;
+            background: #e0f2ed;
+            color: #2d8a76;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 7px 13px;
+            border-radius: 15px;
+            letter-spacing: 1px;
+        }
+        .guide-card-body h3 {
+            color: #176b5b;
+            font-size: 20px;
+            font-weight: 800;
+            margin-top: 17px;
+            margin-bottom: 12px;
+        }
+        .guide-card-body p { font-size: 14px; line-height: 1.7; color: #526c63; min-height: 70px; }
+        .guide-expand-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 12px 15px;
+            background: #edf7f5;
+            color: #2d8a76;
+            border: 1px solid #d9ebe5;
+            border-radius: 9px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+        .guide-expand-btn:hover { background: #dff1ec; }
+        .guide-expand-btn i { transition: transform 0.2s; }
+        .guide-expand-btn:not(.collapsed) i { transform: rotate(180deg); }
+        .guide-expanded-content { border-top: 1px solid #e1eae5; padding-top: 20px; margin-top: 20px; }
+        .badge-subheading { color: #176b5b; font-size: 15px; font-weight: 800; margin-bottom: 15px; }
+        .bullet-list-style { color: #526c63; font-size: 13px; line-height: 1.8; padding-left: 20px; }
+        .bullet-list-style li { margin-bottom: 9px; }
+        .carousel-controls { display: flex; justify-content: flex-end; gap: 12px; margin-bottom: 25px; }
+        .slider-btn {
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid #d9ebe5;
+            color: #2d8a76;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .slider-btn:hover { background: #2d8a76; color: white; }
+        .safety-guide { padding: 80px 0; background: #edf7f5; }
+        .safety-header { text-align: center; margin-bottom: 45px; }
+        .safety-header .tag {
+            display: inline-block;
+            background: #e0f2ed;
+            color: #2d8a76;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            padding: 8px 16px;
+            border-radius: 15px;
+            margin-bottom: 18px;
+        }
+        .safety-header .heading { color: #176b5b; font-size: 38px; font-weight: 800; margin-bottom: 15px; }
+        .response-description { color: #526c63; font-size: 15px; font-weight: 500; }
+        .response-card { border-radius: 16px; overflow: hidden; }
+        .response-card .position-relative { height: 370px; }
+        .response-card .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s;
+        }
+        .response-card:hover .card-img-top { transform: scale(1.05); }
+        .response-card .card-img-overlay {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 25px;
+            color: white;
+            background: linear-gradient(180deg, transparent 20%, rgba(10,40,36,0.9) 100%);
+        }
+        .response-card .card-title { font-size: 30px; font-weight: 800; color: white; margin-bottom: 12px; }
+        .response-card .card-caption { font-size: 14px; font-weight: 500; line-height: 1.7; color: #e6f2ef; margin-bottom: 0; }
+        .locations-section { padding: 75px 0 90px; background: #e3f1ec; }
+        .section-title-line {
+            height: 3px;
+            width: 55px;
+            background: #2d8a76;
+            border-radius: 5px;
+            margin: 20px auto 0;
+        }
+        .location-card {
+            background: white;
+            border: 1px solid #e1eae5;
+            border-radius: 16px;
+            padding: 28px;
+            height: 100%;
+        }
+        .location-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: #e1f3ed;
+            color: #2d8a76;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+        }
+        .location-icon i { font-size: 28px; }
+        .location-card h4 { color: #176b5b; font-size: 20px; font-weight: 800; margin-bottom: 15px; }
+        .location-card ul { color: #526c63; font-size: 13px; line-height: 1.9; padding-left: 20px; margin-bottom: 0; }
+        .location-card li { margin-bottom: 10px; }
+        .response-card, .location-card, .hero-info-card {
+            box-shadow: 0 5px 12px rgba(0,0,0,0.35), 0 12px 28px rgba(0,0,0,0.32), 0 20px 45px rgba(0,0,0,0.25);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .response-card:hover, .location-card:hover, .hero-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.4), 0 18px 40px rgba(0,0,0,0.35), 0 25px 55px rgba(0,0,0,0.3);
+        }
+        @media (max-width: 991px) {
+            .hero-title { font-size: 40px; }
+            .hero-info-card { max-width: 100%; }
+        }
+        @media (max-width: 576px) {
+            .earthquake-hero-wrapper { padding: 60px 0; }
+            .hero-title { font-size: 34px; }
+            .hero-info-card { padding: 22px; }
+            .section-title-teal, .safety-header .heading { font-size: 30px; }
+            .guides-section, .safety-guide, .locations-section { padding: 55px 0; }
+            .guide-card-body p { min-height: auto; }
+            .response-card .position-relative { height: 320px; }
+        }
+        /* Navbar */
+.navbar-custom {
+    max-width: 1300px;
+    min-height: 68px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: #a1d4d8c1;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.logo {
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border: 1px solid #328e8e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.nav-item-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 11px;
+    border-radius: 25px;
+    color: #176B5B;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+.nav-item-custom i {
+    font-size: 19px;
+}
+.nav-item-custom:hover,
+.nav-item-custom:focus {
+    background-color: rgba(75, 150, 147, 0.13);
+    color: #176B5B;
+}
+.nav-item-custom.active {
+    background-color: #328e8e;
+    color: white;
+}
+.dropdown-menu {
+    min-width: 220px;
+    padding: 8px;
+    margin-top: 10px !important;
+    background-color: #FFFFFF;
+    border: 1px solid #d4e9e5;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(39, 103, 99, 0.12);
+}
+.dropdown-item {
+    padding: 10px 12px;
+    color: #176B5B;
+    font-size: 14px;
+    border-radius: 9px;
+    white-space: normal;
+    transition: background-color 0.2s ease;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #edf7f5;
+    color: #176B5B;
+}
+.dropdown-item i {
+    width: 23px;
+    margin-right: 5px;
+}
+.account-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-left: 12px;
+}
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #176B5B;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 12px;
+    border-radius: 25px;
+    white-space: nowrap;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+.login-btn:hover,
+.login-btn:focus {
+    background-color: rgba(75, 150, 147, 0.13);
+    color: #176B5B;
+}
+.signup-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #328e8e;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 17px;
+    border-radius: 25px;
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
+}
+.signup-btn:hover {
+    background-color: #328e8e;
+    color: white;
+}
+.navbar-custom .navbar-toggler {
+    border: 1px solid #328e8e;
+    border-radius: 12px;
+    padding: 6px 9px;
+}
+.navbar-custom .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-custom .navbar-toggler-icon {
+    width: 22px;
+    height: 22px;
+}
+@media (max-width: 1199.98px) {
+    .navbar-custom {
+        padding: 10px 15px;
+    }
+    .nav-links {
+        gap: 3px;
+    }
+    .nav-item-custom {
+        padding: 8px 9px;
+        font-size: 13px;
+    }
+    .account-area {
+        margin-left: 5px;
+        gap: 3px;
+    }
+    .login-btn {
+        padding: 9px 8px;
+    }
+    .signup-btn {
+        padding: 9px 12px;
+    }
+}
+@media (max-width: 991.98px) {
+    body {
+        padding: 12px;
+    }
+    .navbar-custom {
+    width: calc(100% - 30px);
+    border-radius: 22px;
+    padding: 10px 15px;
+}
+    .navbar-custom .navbar-collapse {
+        flex-basis: 100%;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+        margin-top: 15px;
+    }
+    .nav-item-custom {
+        justify-content: flex-start;
+        padding: 11px 13px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+    .nav-item-custom i {
+        width: 23px;
+    }
+    .nav-links .dropdown {
+        width: 100%;
+    }
+    .nav-links .dropdown-toggle {
+        width: 100%;
+    }
+    .dropdown-menu {
+        position: static !important;
+        width: 100%;
+        margin-top: 5px !important;
+        border-radius: 12px;
+        box-shadow: none;
+    }
+    .account-area {
+        justify-content: flex-start;
+        margin: 12px 0 3px;
+        padding: 5px 8px;
+    }
+    .account-area .dropdown-menu {
+    position: absolute !important;
+    top: 100%;
+    left: 0 !important;
+    right: auto !important;
+    transform: none !important;
+    width: 220px;
+    margin-top: 5px !important;
+    box-shadow: 0 8px 22px rgba(39, 103, 99, 0.12);
+}
+}
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+    .navbar-custom {
+        padding: 8px 12px;
+    }
+    .logo {
+        width: 43px;
+        height: 43px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .nav-item-custom,
+    .login-btn,
+    .signup-btn,
+    .dropdown-item {
+        transition: none;
+    }
+}
+/* Footer */
+    .website-footer {
+        background: linear-gradient(
+            180deg,
+            #edf7f5 0%,
+            #d5eae5 15%,
+            #b5d9d3 35%,
+            #79b8af 65%,
+            #46968d 100%
+        );
+        padding: 42px 4% 18px;
+    }
+    .footer-container {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    .footer-heading {
+        font-size: 20px;
+        font-weight: 700;
+        color: #263832;
+        margin-bottom: 19px;
+    }
+    .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+    .footer-logo {
+        width: 48px;
+        height: 48px;
+        border: 1px solid #7daea7;
+        border-radius: 50%;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    .footer-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    .footer-brand h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+    }
+    .footer-description {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 13px;
+        color: #263832;
+    }
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    .contact-icon {
+        width: 32px;
+        height: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        font-size: 15px;
+        flex-shrink: 0;
+    }
+    .social-heading {
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 19px;
+        margin-bottom: 10px;
+    }
+    .social-links {
+        display: flex;
+        gap: 9px;
+    }
+    .social-links a {
+        width: 30px;
+        height: 30px;
+        border: 2px solid #263832;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        font-size: 17px;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+    }
+    .social-links a:hover {
+        transform: translateY(-3px);
+    }
+    .youtube {
+        background: #ff0000;
+    }
+    .tiktok {
+        background: #111111;
+    }
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-links > li {
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+    .footer-links a {
+        color: #263832;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    .footer-links a:hover {
+        color: #176B5B;
+        text-decoration: underline;
+    }
+    .footer-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .footer-main-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .footer-dropdown-button {
+        border: none;
+        background: transparent;
+        color: #176B5B;
+        padding: 2px 4px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .footer-dropdown-button:hover {
+        color: #2D8A76;
+    }
+    .footer-menu {
+        max-height: 250px;
+        overflow-y: auto;
+        min-width: 230px;
+        max-width: 290px;
+        padding: 8px;
+        border: 1px solid #E1EAE5;
+        border-radius: 12px;
+        background: #FFFFFF;
+        box-shadow: 0 12px 36px rgba(44, 96, 91, 0.12);
+        z-index: 1055;
+    }
+    .footer-menu .dropdown-item {
+        padding: 9px 10px;
+        border-radius: 7px;
+        white-space: normal;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #263832;
+    }
+    .footer-menu .dropdown-item:hover,
+    .footer-menu .dropdown-item:focus {
+        background: #e5f4f0;
+        color: #176B5B;
+    }
+    .footer-signup-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #176B5B !important;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .footer-signup-link:hover {
+        color: #2D8A76 !important;
+    }
+    .newsletter {
+        margin-top: 15px;
+    }
+    .newsletter .footer-heading {
+        margin-bottom: 13px;
+    }
+    .newsletter-form {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+    }
+    .newsletter-input {
+        flex: 1;
+        min-width: 0;
+        height: 41px;
+        padding: 0 20px;
+        border: 1px solid #FFFFFF; 
+        border-radius: 9px;
+        background: #a8d9d1;
+        color: #263832;
+        font-family: inherit;
+        font-size: 14px;
+        outline: none;
+    }
+    .newsletter-input:focus {
+        border-color: #328e8e;
+        background: #FFFFFF;
+    }
+    .newsletter-input::placeholder {
+        color: #176B5B;
+        opacity: 1;
+    }
+    .signup-button {
+        min-width: 80px;
+        height: 41px;
+        border: 1px solid #FFFFFF;
+        background: #a8d9d1;
+        color: #176B5B;
+        padding: 5px 10px;
+        border-radius: 9px;
+        box-shadow: 0 12px 36px rgba(44, 96, 91, 0.055);
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s ease;
+    }
+    .signup-button:hover {
+        border: 2px solid #FFFFFF;
+        background-color: transparent;
+        color: #FFFFFF;
+        padding: 7px 15px;
+    }
+    .signup-inner {
+        border: 1px solid #263832;
+        border-radius: 3px;
+        padding: 4px 8px;
+        font-size: 10px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    .signup-inner i {
+        font-size: 10px;
+        margin-right: 3px;
+    }
+    .signup-message {
+        font-size: 12px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    .footer-bottom {
+        margin-top: 29px;
+        padding-top: 17px;
+        border-top: 5px solid rgba(44, 126, 117, 0.35);
+        border-radius: 4px;
+        text-align: center;
+        font-size: 12px;
+        color: #173c35;
+    }
+    .footer-bottom p {
+        margin: 0;
+    }
+    @media (max-width: 991.98px) {
+        .website-footer {
+            padding: 35px 5% 18px;
+        }
+        .footer-column {
+            margin-bottom: 20px;
+        }
+        .newsletter {
+            margin-top: 5px;
+        }
+    }
+    @media (max-width: 575.98px) {
+        .website-footer {
+            padding: 30px 20px 16px;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+        }
+        .footer-logo {
+            width: 43px;
+            height: 43px;
+        }
+        .footer-heading {
+            font-size: 19px;
+        }
+        .footer-description {
+            font-size: 13px;
+        }
+        .footer-links > li {
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+        .footer-menu {
+            min-width: 220px;
+            max-width: calc(100vw - 45px);
+        }
+        .newsletter-form {
+            flex-wrap: wrap;
+        }
+        .newsletter-input {
+            width: 100%;
+            flex-basis: 100%;
+        }
+        .signup-button {
+            width: 100%;
+        }
+        .footer-bottom {
+            margin-top: 10px;
+            padding-top: 15px;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            transition: none !important;
+        }
+    }
+    @media (max-width: 991.98px) {
+    .account-area .dropdown-menu {
+        top: auto !important;
+        bottom: 100% !important;
+        left: 0 !important;
+        right: auto !important;
+        transform: none !important;
+        margin-bottom: 5px !important;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="login-modal.css">
+</head>
+<body>
+    <!-- Navbar KPPT -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <!-- Website Logo -->
+            <a href="index.html" class="logo" aria-label="Home">
+                <img src="image/Screenshot 2026-11-04 213028.png" alt="logo" style="background-color: #eef7f6;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <div class="nav-links mx-auto">
+                    <a href="index.html" class="nav-item-custom active">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="Earthquake.html" class="nav-item-custom">
+                        <i class="bi bi-globe-asia-australia"></i>
+                        <span>Earthquakes</span>
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-item-custom dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Safety Hub</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="Safety.html"><i class="bi bi-shield-check"></i>Safety</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="preparedness.html"><i class="bi bi-backpack"></i>Preparedness</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="risk-reduction.html"><i class="bi bi-house-check"></i>Risk Reduction</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="funtime.html"><i class="bi bi-controller"></i>Fun Time</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="resources.html" class="nav-item-custom">
+                        <i class="bi bi-journal-bookmark"></i>
+                        <span>Resources</span>
+                    </a>
+                    <a href="FAQ.html" class="nav-item-custom">
+                        <i class="bi bi-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-item-custom dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="goal_mission_vision.html"><i class="bi bi-bullseye"></i>Our Goal, Mission Vision</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="developers.html"><i class="bi bi-people"></i>Developers</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="contact_us.html"><i class="bi bi-envelope"></i>Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="account-area">
+                    <div class="dropdown">
+                        <a href="login.html" class="login-btn dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                            <span>Log In</span>
+                        </a>
+                         <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html"><i class="bi bi-grid"></i>Dashboard</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=quizzes"><i class="bi bi-bar-chart"></i>Quiz Progress</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=community"><i class="bi bi-people"></i>Community Hub</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=profile"><i class="bi bi-person"></i>Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="earthquake-hero-wrapper d-flex align-items-center">
+        <img src="image/eq.jpg" alt="Earthquake background" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <span class="hero-tagline"><i class="bi bi-shield-check me-2"></i>EARTHQUAKE SAFETY GUIDE</span>
+                    <h1 class="hero-title">Be Prepared.<br>Stay Protected.</h1>
+                    <p class="hero-desc">Learn essential safety steps to protect yourself, your family, and your community before, during, and after an earthquake.</p>
+                    <a href="#safety-guides" class="btn-safety">Explore Safety Guides <i class="bi bi-arrow-up-right ms-2"></i></a>
+                </div>
+                <div class="col-lg-5 d-flex justify-content-lg-end" data-aos="fade-left" data-aos-delay="150">
+                    <div class="hero-info-card">
+                        <div class="hero-info-icon"><i class="bi bi-shield-check"></i></div>
+                        <h5>Safety Starts With You</h5>
+                        <p>Small steps today can make a big difference when an earthquake happens.</p>
+                        <div class="hero-info-bottom"><i class="bi bi-check-circle-fill me-2"></i>Learn. Prepare. Stay Safe.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="guides-section" id="safety-guides">
+        <div class="container">
+            <div class="row align-items-end mb-4" data-aos="fade-up">
+                <div class="col-lg-8">
+                    <span class="section-label">SAFETY GUIDES</span>
+                    <h2 class="section-title-teal">Explore Safety Guides</h2>
+                    <p class="section-description">Learn what to do before, during, and after an earthquake. Explore additional guidance using the arrows.</p>
+                </div>
+            </div>
+            <div id="guidesCarousel" class="carousel slide" data-bs-interval="false">
+                <div class="carousel-controls">
+                    <button class="slider-btn" type="button" data-bs-target="#guidesCarousel" data-bs-slide="prev" aria-label="Previous safety guides"><i class="bi bi-arrow-left"></i></button>
+                    <button class="slider-btn" type="button" data-bs-target="#guidesCarousel" data-bs-slide="next" aria-label="Next safety guides"><i class="bi bi-arrow-right"></i></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                                <div class="guide-card">
+                                    <div class="guide-card-top"><img src="image/emergencybag.jpeg" alt="Emergency backpack"></div>
+                                    <div class="guide-card-body">
+                                        <span class="badge-before">BEFORE</span>
+                                        <h3>Prepare in Advance</h3>
+                                        <p>Prepare your home, emergency supplies, and family safety plan before an earthquake.</p>
+                                        <button class="guide-expand-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCard1" aria-expanded="false">View Safety Guide <i class="bi bi-chevron-down"></i></button>
+                                        <div class="collapse" id="collapseCard1">
+                                            <div class="guide-expanded-content">
+                                                <h5 class="badge-subheading">Before an Earthquake</h5>
+                                                <ul class="bullet-list-style">
+                                                    <li>Prepare an emergency kit with food, water, and a flashlight.</li>
+                                                    <li>Secure heavy furniture and objects that could fall.</li>
+                                                    <li>Identify safe places away from windows.</li>
+                                                    <li>Create a family emergency communication plan.</li>
+                                                    <li>Practise earthquake drills regularly.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="guide-card">
+                                    <div class="guide-card-top"><img src="image/safety.jpg" alt="Earthquake safety"></div>
+                                    <div class="guide-card-body">
+                                        <span class="badge-before">DURING</span>
+                                        <h3>Stay Safe</h3>
+                                        <p>Learn how to protect yourself from falling objects and dangerous shaking.</p>
+                                        <button class="guide-expand-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCard2" aria-expanded="false">View Safety Guide <i class="bi bi-chevron-down"></i></button>
+                                        <div class="collapse" id="collapseCard2">
+                                            <div class="guide-expanded-content">
+                                                <h5 class="badge-subheading">During an Earthquake</h5>
+                                                <ul class="bullet-list-style">
+                                                    <li>Drop onto your hands and knees.</li>
+                                                    <li>Cover your head and neck under a sturdy table if nearby.</li>
+                                                    <li>Hold on until shaking stops.</li>
+                                                    <li>Stay inside if you are indoors.</li>
+                                                    <li>Stay away from windows and falling objects.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="guide-card">
+                                    <div class="guide-card-top"><img src="image/recovery.jpg" alt="Earthquake recovery"></div>
+                                    <div class="guide-card-body">
+                                        <span class="badge-before">AFTER</span>
+                                        <h3>Recover and Stay Alert</h3>
+                                        <p>Check for danger, prepare for aftershocks, and follow reliable safety updates.</p>
+                                        <button class="guide-expand-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCard3" aria-expanded="false">View Safety Guide <i class="bi bi-chevron-down"></i></button>
+                                        <div class="collapse" id="collapseCard3">
+                                            <div class="guide-expanded-content">
+                                                <h5 class="badge-subheading">After an Earthquake</h5>
+                                                <ul class="bullet-list-style">
+                                                    <li>Check yourself and others for injuries.</li>
+                                                    <li>Expect aftershocks.</li>
+                                                    <li>Avoid damaged buildings and power lines.</li>
+                                                    <li>Follow official emergency information.</li>
+                                                    <li>Contact family members when safe.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="guide-card">
+                                    <div class="guide-card-top"><img src="image/homesafety.jpg" alt="Home safety"></div>
+                                    <div class="guide-card-body">
+                                        <span class="badge-before">BEFORE</span>
+                                        <h3>Structural &amp; Home Safety</h3>
+                                        <p>Make your living space safer by identifying and reducing possible hazards.</p>
+                                        <button class="guide-expand-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCard4" aria-expanded="false">View Safety Guide <i class="bi bi-chevron-down"></i></button>
+                                        <div class="collapse" id="collapseCard4">
+                                            <div class="guide-expanded-content">
+                                                <h5 class="badge-subheading">Home Safety Tips</h5>
+                                                <ul class="bullet-list-style">
+                                                    <li>Secure bookcases and wardrobes.</li>
+                                                    <li>Keep heavy objects on lower shelves.</li>
+                                                    <li>Keep exits and walkways clear.</li>
+                                                    <li>Use safety latches on cabinets.</li>
+                                                    <li>Ask professionals to inspect structural concerns.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="guide-card">
+                                    <div class="guide-card-top"><img src="image/publicsafety.webp" alt="Public space safety"></div>
+                                    <div class="guide-card-body">
+                                        <span class="badge-before">DURING</span>
+                                        <h3>Navigating Public Spaces</h3>
+                                        <p>Learn how to stay safe in crowded places or unfamiliar locations.</p>
+                                        <button class="guide-expand-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCard5" aria-expanded="false">View Safety Guide <i class="bi bi-chevron-down"></i></button>
+                                        <div class="collapse" id="collapseCard5">
+                                            <div class="guide-expanded-content">
+                                                <h5 class="badge-subheading">Public Space Safety</h5>
+                                                <ul class="bullet-list-style">
+                                                    <li>Protect your head and neck during shaking.</li>
+                                                    <li>Stay away from shelves and falling objects.</li>
+                                                    <li>Do not rush toward crowded exits.</li>
+                                                    <li>Avoid elevators.</li>
+                                                    <li>Near the coast, move to higher ground after strong or prolonged shaking.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="guide-card">
+                                    <div class="guide-card-top"><img src="image/firstresponse.jpg" alt="First response"></div>
+                                    <div class="guide-card-body">
+                                        <span class="badge-before">AFTER</span>
+                                        <h3>First Response &amp; Logistics</h3>
+                                        <p>Understand important safety steps to take after an earthquake.</p>
+                                        <button class="guide-expand-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCard6" aria-expanded="false">View Safety Guide <i class="bi bi-chevron-down"></i></button>
+                                        <div class="collapse" id="collapseCard6">
+                                            <div class="guide-expanded-content">
+                                                <h5 class="badge-subheading">First Response</h5>
+                                                <ul class="bullet-list-style">
+                                                    <li>Check for injuries and request medical help if needed.</li>
+                                                    <li>Provide first aid only within your training.</li>
+                                                    <li>Avoid damaged electrical equipment.</li>
+                                                    <li>Wear sturdy shoes around debris.</li>
+                                                    <li>Keep roads clear for emergency responders.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="safety-guide">
+        <div class="container">
+            <header class="safety-header" data-aos="fade-up">
+                <span class="tag">SAFETY GUIDE</span>
+                <h2 class="heading">Immediate Earthquake Response</h2>
+                <p class="response-description">Remember these three simple steps to protect yourself during an earthquake.</p>
+            </header>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="response-card" data-aos="flip-left" data-aos-duration="1500">
+                        <div class="position-relative">
+                            <img src="image/photo_2026-11-04_09-10-59.jpg" alt="Drop" class="card-img-top">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">DROP</h4>
+                                <p class="card-caption">Down onto your hands and knees before the earthquake knocks you down.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="response-card" data-aos="flip-right" data-aos-duration="1500">
+                        <div class="position-relative">
+                            <img src="image/photo_2026-11-04_09-11-01.jpg" alt="Cover" class="card-img-top">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">COVER</h4>
+                                <p class="card-caption">Your head and neck (and your entire body if possible) underneath a sturdy table or desk.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="response-card" data-aos="flip-left" data-aos-duration="1500">
+                        <div class="position-relative">
+                            <img src="image/photo_2026-11-04_09-11-02.jpg" alt="Hold" class="card-img-top">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">HOLD ON</h4>
+                                <p class="card-caption">To your shelter until the shaking stops. Be prepared to move with your shelter if it shifts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="locations-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-label">LOCATION-BASED SAFETY</span>
+                <h2 class="section-title-teal">Safety in Different Locations</h2>
+                <p class="section-description">Learn how to stay safe in different environments during an earthquake.</p>
+                <div class="section-title-line"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="location-card">
+                        <div class="location-icon"><i class="bi bi-buildings"></i></div>
+                        <h4>Indoors &amp; High-Rise</h4>
+                        <ul>
+                            <li>Stay indoors during shaking.</li>
+                            <li>Drop, Cover, and Hold On.</li>
+                            <li>Stay away from windows.</li>
+                            <li>Do not use elevators.</li>
+                            <li>Follow building safety instructions afterward.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="location-card">
+                        <div class="location-icon"><i class="bi bi-ticket-perforated"></i></div>
+                        <h4>Stadiums &amp; Theaters</h4>
+                        <ul>
+                            <li>Stay in your seat during shaking.</li>
+                            <li>Protect your head and neck.</li>
+                            <li>Do not rush toward exits.</li>
+                            <li>Follow staff instructions afterward.</li>
+                            <li>Leave carefully when safe.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="location-card">
+                        <div class="location-icon"><i class="bi bi-tree"></i></div>
+                        <h4>Outdoor Areas</h4>
+                        <ul>
+                            <li>Stay outdoors if already outside.</li>
+                            <li>Move away from buildings when safe.</li>
+                            <li>Avoid trees and power lines.</li>
+                            <li>Get low and protect your head.</li>
+                            <li>Watch for damaged structures afterward.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="location-card">
+                        <div class="location-icon"><i class="bi bi-car-front"></i></div>
+                        <h4>Moving Vehicles</h4>
+                        <ul>
+                            <li>Pull over safely.</li>
+                            <li>Avoid bridges and power lines.</li>
+                            <li>Stay inside until shaking stops.</li>
+                            <li>Listen for emergency updates.</li>
+                            <li>Watch for damaged roads afterward.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer KPPT -->
+     <footer class="website-footer">
+        <div class="footer-container">
+            <div class="row g-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="col-12 col-md-6 col-lg-4 footer-column">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="image/Screenshot 2026-11-04 213028.png" alt="logo" style="background-color: #eef7f6;">
+                        </div>
+                        <h3>EarthWise</h3>
+                    </div>
+                    <p class="footer-description">Explore global seismic history, master life-saving safety practices, and access our interactive emergency preparedness checklists</p>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
+                        <span>location: Zaing North 3 Street, Bago, Myanmar</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
+                        <span>phone no: 09684578048</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
+                        <span>gmail: earthwise005@gmail.com</span>
+                    </div>
+                    <h4 class="social-heading">social media</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@Earthwise005-e4o" class="youtube" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://t.me/earthwise005" class="telegram" aria-label="Telegram">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@earthwise005" class="tiktok" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Earthquake.html">Earthquakes</a></li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">Safety Hub</a>
+                            <button class="footer-dropdown-button" type="button"data-bs-toggle="dropdown" aria-expanded="false" aria-label="Safety Hub submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item" href="Safety.html">Safety</a></li>
+                                <li><a class="dropdown-item" href="preparedness.html">Preparedness</a></li>
+                                <li><a class="dropdown-item" href="risk-reduction.html">Risk Reduction</a></li>
+                                <li><a class="dropdown-item" href="funtime.html">Fun Time</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">About Us</a>
+                            <button class="footer-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="About Us submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Goal</a></li>
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Mission</a></li>
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Vision</a></li>
+                                <li><a class="dropdown-item" href="developers.html">Developers</a></li>
+                                <li><a class="dropdown-item" href="contact_us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">Log In</a>
+                            <button class="footer-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item login-required" href="dashboard.html">Dashboard</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=quizzes">Quiz Progress</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=community">Community Hub</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=profile">Profile</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="signup.html" class="footer-signup-link"><i class="bi bi-person-plus"></i>Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3 class="footer-heading">Emergency Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="preparedness.html">Emergency Action Guide</a></li>
+                        <li><a href="preparedness.html">Emergency Checklist</a></li>
+                        <li><a href="Safety.html">Official Safety Guidelines</a></li>
+                        <li><a href="https://borgenproject.org/myanmar-after-the-earthquake/">Relief Organisations</a></li>
+                        <li><a class="login-required" href="dashboard.html?section=community">Community support</a></li>
+                    </ul>
+                    <div class="newsletter">
+                        <h3 class="footer-heading">Stay Connected</h3>
+                        <form class="newsletter-form" action="signup.html" method="get">
+                            <input type="email" class="newsletter-input" placeholder="Email address..." aria-label="Email address"required>
+                            <button type="submit" class="signup-button">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3 class="footer-heading">About &amp; Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="goal_mission_vision.html">Our Mission &amp; Vision</a></li>
+                        <li><a href="developers.html">Our Developers</a></li>
+                        <li><a href="resources.html">Sources &amp; References</a></li>
+                        <li><a href="pdf/EarthWise Privacy Policy.pdf">Privacy Policy</a></li>
+                        <li><a href="pdf/EarthWise Terms & Conditions.pdf">Terms &amp; Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Earthwise | Year 9 Fuchsia</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 80
+        });
+    </script>
+    <div class="modal fade" id="loginRequiredModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content login-required-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Login Required</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <p>Please log in or create an account to access this feature.</p>
+                    <div class="d-flex gap-2 mt-4">
+                        <a href="login.html" class="btn modal-login-btn">Log In</a>
+                        <a href="signup.html" class="btn modal-signup-btn">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login-check.js"></script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Bootstrap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="FAQ.css">
+    <link rel="stylesheet" href="login-modal.css">
+</head>
+<body>
+    <!-- Navbar KPPT -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <!-- Website Logo -->
+            <a href="index.html" class="logo" aria-label="Home">
+                <img src="image/Screenshot 2026-11-04 213028.png" alt="logo" style="background-color: #eef7f6;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <div class="nav-links mx-auto">
+                    <a href="index.html" class="nav-item-custom active">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="Earthquake.html" class="nav-item-custom">
+                        <i class="bi bi-globe-asia-australia"></i>
+                        <span>Earthquakes</span>
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-item-custom dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Safety Hub</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="Safety.html"><i class="bi bi-shield-check"></i>Safety</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="preparedness.html"><i class="bi bi-backpack"></i>Preparedness</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="risk-reduction.html"><i class="bi bi-house-check"></i>Risk Reduction</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="funtime.html"><i class="bi bi-controller"></i>Fun Time</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="resources.html" class="nav-item-custom">
+                        <i class="bi bi-journal-bookmark"></i>
+                        <span>Resources</span>
+                    </a>
+                    <a href="FAQ.html" class="nav-item-custom">
+                        <i class="bi bi-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-item-custom dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="goal_mission_vision.html"><i class="bi bi-bullseye"></i>Our Goal, Mission Vision</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="developers.html"><i class="bi bi-people"></i>Developers</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="contact_us.html"><i class="bi bi-envelope"></i>Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="account-area">
+                    <div class="dropdown">
+                        <a href="login.html" class="login-btn dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                            <span>Log In</span>
+                        </a>
+                         <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html"><i class="bi bi-grid"></i>Dashboard</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=quizzes"><i class="bi bi-bar-chart"></i>Quiz Progress</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=community"><i class="bi bi-people"></i>Community Hub</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=profile"><i class="bi bi-person"></i>Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header text-center">
+                <span class="section-tag">
+                    <i class="bi bi-question-circle"></i>
+                    HAVE QUESTIONS?
+                </span>
+                <h1>Frequently Asked <span>Questions</span></h1>
+                <p>
+                    Find answers to common questions about earthquakes,
+                    their impacts, and how to stay prepared.
+                </p>
+            </div>
+            <div class="faq-content">
+                <div class="faq-category">
+                    <h3><i class="bi bi-globe-asia-australia"></i> Understanding Earthquakes</h3>
+                    <details class="faq-item">
+                        <summary>What is an earthquake?</summary>
+                        <p>
+                            An earthquake is the sudden shaking of the Earth's surface
+                            caused by the release of energy within the Earth's crust.
+                            This usually happens when rocks suddenly move along faults.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What causes earthquakes?</summary>
+                        <p>
+                            Most earthquakes are caused by tectonic plate movements.
+                            Other causes include volcanic activity and human activities
+                            such as mining, large reservoirs, and underground fluid injection.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Why is Myanmar vulnerable to earthquakes?</summary>
+                        <p>
+                            Myanmar is located in a geologically active region where
+                            tectonic plates interact. It also has several active faults,
+                            including the Sagaing, Kyaukkyan, and Kabaw Faults.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Which areas in Myanmar are at higher risk?</summary>
+                        <p>
+                            Areas near major fault lines face greater earthquake risks.
+                            These include Mandalay, Sagaing, Bago, Taungoo, Naypyidaw,
+                            parts of Shan State, and areas near the Indo-Burman Ranges.
+                        </p>
+                    </details>
+                </div>
+                <div class="faq-category">
+                    <h3><i class="bi bi-activity"></i> Earthquake Impacts</h3>
+                    <details class="faq-item">
+                        <summary>What are the possible impacts of earthquakes?</summary>
+                        <p>
+                            Earthquakes can damage buildings, roads, bridges, schools,
+                            and hospitals. They can also cause injuries, casualties,
+                            displacement, and disruption to essential services.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can earthquakes cause other natural disasters?</summary>
+                        <p>
+                            Yes. Earthquakes can trigger secondary hazards such as
+                            landslides, tsunamis, soil liquefaction, and fires.
+                            These hazards may cause additional damage to communities.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What happened during the 2025 Myanmar earthquake?</summary>
+                        <p>
+                            On 28 March 2025, a magnitude 7.7 earthquake struck
+                            central Myanmar near Sagaing. It caused widespread damage
+                            across several regions, affecting homes, schools,
+                            hospitals, and communities.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can scientists predict when an earthquake will happen?</summary>
+                        <p>
+                            No. Scientists cannot accurately predict the exact date,
+                            time, location, or magnitude of an earthquake.
+                            However, they can identify earthquake-prone areas
+                            and estimate long-term seismic risks.
+                        </p>
+                    </details>
+                </div>
+                <div class="faq-category">
+                    <h3><i class="bi bi-shield-check"></i> Safety and Preparedness</h3>
+                    <details class="faq-item">
+                        <summary>What should I do during an earthquake?</summary>
+                        <p>
+                            Follow the Drop, Cover, and Hold On procedure.
+                            Drop onto your hands and knees, cover your head and neck
+                            under a sturdy table or desk, and hold on until the shaking stops.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What should I prepare before an earthquake?</summary>
+                        <p>
+                            Prepare an emergency kit containing drinking water,
+                            non-perishable food, a flashlight, a first-aid kit,
+                            essential medicines, and other necessary supplies.
+                            You should also secure heavy furniture and practise
+                            an emergency communication plan.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What should I do after an earthquake?</summary>
+                        <p>
+                            Check yourself and others for injuries, expect aftershocks,
+                            and stay away from damaged buildings and fallen power lines.
+                            Follow reliable emergency updates and leave unsafe buildings
+                            when it is safe to do so.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is there a way to prevent earthquakes?</summary>
+                        <p>
+                            Earthquakes are natural geological events that humans
+                            cannot prevent. However, we can reduce their impacts
+                            through earthquake-resistant buildings, safety education,
+                            emergency planning, and community preparedness.
+                        </p>
+                    </details>
+                </div>
+                <div class="faq-category">
+                    <h3><i class="bi bi-people"></i> Community and Resources</h3>
+                    <details class="faq-item">
+                        <summary>How can communities reduce earthquake risks?</summary>
+                        <p>
+                            Communities can improve building safety, participate
+                            in earthquake drills, secure public facilities,
+                            spread awareness, and prepare emergency resources
+                            before disasters occur.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How can I help earthquake-affected communities?</summary>
+                        <p>
+                            You can support affected communities through trusted
+                            charity organisations, responsible donations,
+                            awareness campaigns, and appropriate volunteer activities.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Where can I find reliable earthquake information?</summary>
+                        <p>
+                            You can find earthquake information through organisations
+                            such as the United States Geological Survey (USGS),
+                            UNICEF, the International Federation of Red Cross
+                            and Red Crescent Societies (IFRC), and relevant
+                            Myanmar authorities.
+                        </p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What is the purpose of this website?</summary>
+                        <p>
+                            Our website aims to raise awareness about earthquake
+                            hazards in Myanmar, explain their causes and impacts,
+                            and provide practical safety guidelines and preparedness
+                            information to help communities reduce risks.
+                        </p>
+                    </details>
+                </div>
+            </div>
+            <div class="faq-bottom">
+                <div class="faq-bottom-icon">
+                    <i class="bi bi-lightbulb"></i>
+                </div>
+                <div>
+                    <h4>Stay informed. Stay prepared.</h4>
+                    <p>
+                        Understanding earthquake risks and taking action
+                        today can help protect communities tomorrow.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer KPPT -->
+     <footer class="website-footer">
+        <div class="footer-container">
+            <div class="row g-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="col-12 col-md-6 col-lg-4 footer-column">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="image/Screenshot 2026-11-04 213028.png" alt="logo" style="background-color: #eef7f6;">
+                        </div>
+                        <h3>EarthWise</h3>
+                    </div>
+                    <p class="footer-description">Explore global seismic history, master life-saving safety practices, and access our interactive emergency preparedness checklists</p>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
+                        <span>location: Zaing North 3 Street, Bago, Myanmar</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
+                        <span>phone no: 09684578048</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
+                        <span>gmail: earthwise005@gmail.com</span>
+                    </div>
+                    <h4 class="social-heading">social media</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@Earthwise005-e4o" class="youtube" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://t.me/earthwise005" class="telegram" aria-label="Telegram">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@earthwise005" class="tiktok" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Earthquake.html">Earthquakes</a></li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">Safety Hub</a>
+                            <button class="footer-dropdown-button" type="button"data-bs-toggle="dropdown" aria-expanded="false" aria-label="Safety Hub submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item" href="Safety.html">Safety</a></li>
+                                <li><a class="dropdown-item" href="preparedness.html">Preparedness</a></li>
+                                <li><a class="dropdown-item" href="risk-reduction.html">Risk Reduction</a></li>
+                                <li><a class="dropdown-item" href="funtime.html">Fun Time</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">About Us</a>
+                            <button class="footer-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="About Us submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Goal</a></li>
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Mission</a></li>
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Vision</a></li>
+                                <li><a class="dropdown-item" href="developers.html">Developers</a></li>
+                                <li><a class="dropdown-item" href="contact_us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">Log In</a>
+                            <button class="footer-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item login-required" href="dashboard.html">Dashboard</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=quizzes">Quiz Progress</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=community">Community Hub</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=profile">Profile</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="signup.html" class="footer-signup-link"><i class="bi bi-person-plus"></i>Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3 class="footer-heading">Emergency Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="preparedness.html">Emergency Action Guide</a></li>
+                        <li><a href="preparedness.html">Emergency Checklist</a></li>
+                        <li><a href="Safety.html">Official Safety Guidelines</a></li>
+                        <li><a href="https://borgenproject.org/myanmar-after-the-earthquake/">Relief Organisations</a></li>
+                        <li><a class="login-required" href="dashboard.html?section=community">Community support</a></li>
+                    </ul>
+                    <div class="newsletter">
+                        <h3 class="footer-heading">Stay Connected</h3>
+                        <form class="newsletter-form" action="signup.html" method="get">
+                            <input type="email" class="newsletter-input" placeholder="Email address..." aria-label="Email address"required>
+                            <button type="submit" class="signup-button">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3 class="footer-heading">About &amp; Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="goal_mission_vision.html">Our Mission &amp; Vision</a></li>
+                        <li><a href="developers.html">Our Developers</a></li>
+                        <li><a href="resources.html">Sources &amp; References</a></li>
+                        <li><a href="pdf/EarthWise Privacy Policy.pdf">Privacy Policy</a></li>
+                        <li><a href="pdf/EarthWise Terms & Conditions.pdf">Terms &amp; Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Earthwise | Year 9 Fuchsia</p>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="loginRequiredModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content login-required-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Login Required</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <p>Please log in or create an account to access this feature.</p>
+                    <div class="d-flex gap-2 mt-4">
+                        <a href="login.html" class="btn modal-login-btn">Log In</a>
+                        <a href="signup.html" class="btn modal-signup-btn">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login-check.js"></script>
+</body>
+</html>

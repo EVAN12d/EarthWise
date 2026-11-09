@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Earthquakes in Myanmar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+        body {
+            background-color: #edf7f5;
+            font-family: 'DM Sans', sans-serif;
+            color: #263832;
+        }
+        /* Navbar */
+.navbar-custom {
+    max-width: 1300px;
+    min-height: 68px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: #a1d4d8c1;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.logo {
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border: 1px solid #328e8e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.nav-item-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 11px;
+    border-radius: 25px;
+    color: #176B5B;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+.nav-item-custom i {
+    font-size: 19px;
+}
+.nav-item-custom:hover,
+.nav-item-custom:focus {
+    background-color: rgba(75, 150, 147, 0.13);
+    color: #176B5B;
+}
+.nav-item-custom.active {
+    background-color: #328e8e;
+    color: white;
+}
+.dropdown-menu {
+    min-width: 220px;
+    padding: 8px;
+    margin-top: 10px !important;
+    background-color: #FFFFFF;
+    border: 1px solid #d4e9e5;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(39, 103, 99, 0.12);
+}
+.dropdown-item {
+    padding: 10px 12px;
+    color: #176B5B;
+    font-size: 14px;
+    border-radius: 9px;
+    white-space: normal;
+    transition: background-color 0.2s ease;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #edf7f5;
+    color: #176B5B;
+}
+.dropdown-item i {
+    width: 23px;
+    margin-right: 5px;
+}
+.account-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-left: 12px;
+}
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #176B5B;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 12px;
+    border-radius: 25px;
+    white-space: nowrap;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+.login-btn:hover,
+.login-btn:focus {
+    background-color: rgba(75, 150, 147, 0.13);
+    color: #176B5B;
+}
+.signup-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #328e8e;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 17px;
+    border-radius: 25px;
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
+}
+.signup-btn:hover {
+    background-color: #328e8e;
+    color: white;
+}
+.navbar-custom .navbar-toggler {
+    border: 1px solid #328e8e;
+    border-radius: 12px;
+    padding: 6px 9px;
+}
+.navbar-custom .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-custom .navbar-toggler-icon {
+    width: 22px;
+    height: 22px;
+}
+@media (max-width: 1199.98px) {
+    .navbar-custom {
+        padding: 10px 15px;
+    }
+    .nav-links {
+        gap: 3px;
+    }
+    .nav-item-custom {
+        padding: 8px 9px;
+        font-size: 13px;
+    }
+    .account-area {
+        margin-left: 5px;
+        gap: 3px;
+    }
+    .login-btn {
+        padding: 9px 8px;
+    }
+    .signup-btn {
+        padding: 9px 12px;
+    }
+}
+@media (max-width: 991.98px) {
+    body {
+        padding: 12px;
+    }
+    .navbar-custom {
+    width: calc(100% - 30px);
+    border-radius: 22px;
+    padding: 10px 15px;
+}
+    .navbar-custom .navbar-collapse {
+        flex-basis: 100%;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+        margin-top: 15px;
+    }
+    .nav-item-custom {
+        justify-content: flex-start;
+        padding: 11px 13px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+    .nav-item-custom i {
+        width: 23px;
+    }
+    .nav-links .dropdown {
+        width: 100%;
+    }
+    .nav-links .dropdown-toggle {
+        width: 100%;
+    }
+    .navbar-custom .dropdown-menu {
+        position: static !important;
+        width: 100%;
+        margin-top: 5px !important;
+        border-radius: 12px;
+        box-shadow: none;
+    }
+    .account-area {
+        justify-content: flex-start;
+        margin: 12px 0 3px;
+        padding: 5px 8px;
+    }
+    .account-area .dropdown-menu {
+    position: absolute !important;
+    top: 100%;
+    left: 0 !important;
+    right: auto !important;
+    transform: none !important;
+    width: 220px;
+    margin-top: 5px !important;
+    box-shadow: 0 8px 22px rgba(39, 103, 99, 0.12);
+}
+}
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+    .navbar-custom {
+        padding: 8px 12px;
+    }
+    .logo {
+        width: 43px;
+        height: 43px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .nav-item-custom,
+    .login-btn,
+    .signup-btn,
+    .dropdown-item {
+        transition: none;
+    }
+}
+/* Footer */
+    .website-footer {
+        background: linear-gradient(
+            180deg,
+            #edf7f5 0%,
+            #d5eae5 15%,
+            #b5d9d3 35%,
+            #79b8af 65%,
+            #46968d 100%
+        );
+        padding: 42px 4% 18px;
+    }
+    .footer-container {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    .footer-heading {
+        font-size: 20px;
+        font-weight: 700;
+        color: #263832;
+        margin-bottom: 19px;
+    }
+    .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+    .footer-logo {
+        width: 48px;
+        height: 48px;
+        border: 1px solid #7daea7;
+        border-radius: 50%;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    .footer-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    .footer-brand h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+    }
+    .footer-description {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 13px;
+        color: #263832;
+    }
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    .contact-icon {
+        width: 32px;
+        height: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        font-size: 15px;
+        flex-shrink: 0;
+    }
+    .social-heading {
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 19px;
+        margin-bottom: 10px;
+    }
+    .social-links {
+        display: flex;
+        gap: 9px;
+    }
+    .social-links a {
+        width: 30px;
+        height: 30px;
+        border: 2px solid #263832;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        font-size: 17px;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+    }
+    .social-links a:hover {
+        transform: translateY(-3px);
+    }
+    .youtube {
+        background: #ff0000;
+    }
+    .tiktok {
+        background: #111111;
+    }
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-links > li {
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+    .footer-links a {
+        color: #263832;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    .footer-links a:hover {
+        color: #176B5B;
+        text-decoration: underline;
+    }
+    .footer-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .footer-main-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .footer-dropdown-button {
+        border: none;
+        background: transparent;
+        color: #176B5B;
+        padding: 2px 4px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .footer-dropdown-button:hover {
+        color: #2D8A76;
+    }
+    .footer-menu {
+        max-height: 250px;
+        overflow-y: auto;
+        min-width: 230px;
+        max-width: 290px;
+        padding: 8px;
+        border: 1px solid #E1EAE5;
+        border-radius: 12px;
+        background: #FFFFFF;
+        box-shadow: 0 12px 36px rgba(44, 96, 91, 0.12);
+        z-index: 1055;
+    }
+    .footer-menu .dropdown-item {
+        padding: 9px 10px;
+        border-radius: 7px;
+        white-space: normal;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #263832;
+    }
+    .footer-menu .dropdown-item:hover,
+    .footer-menu .dropdown-item:focus {
+        background: #e5f4f0;
+        color: #176B5B;
+    }
+    .footer-signup-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #176B5B !important;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .footer-signup-link:hover {
+        color: #2D8A76 !important;
+    }
+    .newsletter {
+        margin-top: 15px;
+    }
+    .newsletter .footer-heading {
+        margin-bottom: 13px;
+    }
+    .newsletter-form {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+    }
+    .newsletter-input {
+        flex: 1;
+        min-width: 0;
+        height: 41px;
+        padding: 0 20px;
+        border: 1px solid #FFFFFF; 
+        border-radius: 9px;
+        background: #a8d9d1;
+        color: #263832;
+        font-family: inherit;
+        font-size: 14px;
+        outline: none;
+    }
+    .newsletter-input:focus {
+        border-color: #328e8e;
+        background: #FFFFFF;
+    }
+    .newsletter-input::placeholder {
+        color: #176B5B;
+        opacity: 1;
+    }
+    .signup-button {
+        min-width: 80px;
+        height: 41px;
+        border: 1px solid #FFFFFF;
+        background: #a8d9d1;
+        color: #176B5B;
+        padding: 5px 10px;
+        border-radius: 9px;
+        box-shadow: 0 12px 36px rgba(44, 96, 91, 0.055);
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s ease;
+    }
+    .signup-button:hover {
+        border: 2px solid #FFFFFF;
+        background-color: transparent;
+        color: #FFFFFF;
+        padding: 7px 15px;
+    }
+    .signup-inner {
+        border: 1px solid #263832;
+        border-radius: 3px;
+        padding: 4px 8px;
+        font-size: 10px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    .signup-inner i {
+        font-size: 10px;
+        margin-right: 3px;
+    }
+    .signup-message {
+        font-size: 12px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    .footer-bottom {
+        margin-top: 29px;
+        padding-top: 17px;
+        border-top: 5px solid rgba(44, 126, 117, 0.35);
+        border-radius: 4px;
+        text-align: center;
+        font-size: 12px;
+        color: #173c35;
+    }
+    .footer-bottom p {
+        margin: 0;
+    }
+    @media (max-width: 991.98px) {
+        .website-footer {
+            padding: 35px 5% 18px;
+        }
+        .footer-column {
+            margin-bottom: 20px;
+        }
+        .newsletter {
+            margin-top: 5px;
+        }
+    }
+    @media (max-width: 575.98px) {
+        .website-footer {
+            padding: 30px 20px 16px;
+        }
+        .footer-brand h3 {
+            font-size: 18px;
+        }
+        .footer-logo {
+            width: 43px;
+            height: 43px;
+        }
+        .footer-heading {
+            font-size: 19px;
+        }
+        .footer-description {
+            font-size: 13px;
+        }
+        .footer-links > li {
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+        .footer-menu {
+            min-width: 220px;
+            max-width: calc(100vw - 45px);
+        }
+        .newsletter-form {
+            flex-wrap: wrap;
+        }
+        .newsletter-input {
+            width: 100%;
+            flex-basis: 100%;
+        }
+        .signup-button {
+            width: 100%;
+        }
+        .footer-bottom {
+            margin-top: 10px;
+            padding-top: 15px;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            transition: none !important;
+        }
+    }
+    @media (max-width: 991.98px) {
+    .account-area .dropdown-menu {
+        top: auto !important;
+        bottom: 100% !important;
+        left: 0 !important;
+        right: auto !important;
+        transform: none !important;
+        margin-bottom: 5px !important;
+    }
+    }
+        .timeline-header {
+            background-color: #d5eae5;
+            color: #176B5B;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .timeline-header h1 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            letter-spacing: 4px;
+            margin: 0;
+            font-size: 3rem;
+        }
+        .timeline-header p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: #527b70;
+        }
+        .timeline-container {
+            position: relative;
+            padding: 60px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #79b8af;
+            top: 40px;
+            bottom: 40px;
+            left: 50%;
+            margin-left: -2px;
+        }
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 15px 0;
+        }
+        .left {
+            left: 0;
+            padding-right: 60px;
+        }
+        .right {
+            left: 50%;
+            padding-left: 60px;
+        }
+        .timeline-card {
+            background-color: #ffffff;
+            border: 1px solid #E1EAE5;
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 12px 36px rgba(44, 96, 91, 0.055);
+            text-align: left;
+        }
+        .timeline-year {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #176B5B;
+            margin-bottom: 5px;
+        }
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2D8A76;
+            margin-bottom: 12px;
+        }
+        .timeline-description {
+            font-size: 0.9rem;
+            color: #52665f;
+            line-height: 1.7;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .timeline-description li {
+            margin-bottom: 8px;
+            text-align: left;
+            direction: ltr;
+        }
+        .timeline-description li:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-icon {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 25px;
+            background-color: #ffffff;
+            border: 1px solid #E1EAE5;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 1;
+            color: #2D8A76;
+            box-shadow: 0 12px 36px rgba(44, 96, 91, 0.055);
+        }
+        .left .timeline-icon {
+            right: -25px;
+        }
+        .right .timeline-icon {
+            left: -25px;
+        }
+        @media (max-width: 768px) {
+            .timeline-container::after {
+                left: 25px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 55px;
+                padding-right: 0;
+            }
+            .left,
+            .right {
+                left: 0;
+            }
+            .left .timeline-icon,
+            .right .timeline-icon {
+                left: 0;
+                right: auto;
+            }
+            .timeline-card {
+                padding: 18px;
+            }
+            .timeline-year {
+                font-size: 1.3rem;
+            }
+            .timeline-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="login-modal.css">
+</head>
+<body>
+    <!-- Navbar KPPT -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <!-- Website Logo -->
+            <a href="index.html" class="logo" aria-label="Home">
+                <img src="image/Screenshot 2026-11-04 213028.png" alt="logo" style="background-color: #eef7f6;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <div class="nav-links mx-auto">
+                    <a href="index.html" class="nav-item-custom active">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="Earthquake.html" class="nav-item-custom">
+                        <i class="bi bi-globe-asia-australia"></i>
+                        <span>Earthquakes</span>
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-item-custom dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Safety Hub</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="Safety.html"><i class="bi bi-shield-check"></i>Safety</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="preparedness.html"><i class="bi bi-backpack"></i>Preparedness</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="risk-reduction.html"><i class="bi bi-house-check"></i>Risk Reduction</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="funtime.html"><i class="bi bi-controller"></i>Fun Time</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="resources.html" class="nav-item-custom">
+                        <i class="bi bi-journal-bookmark"></i>
+                        <span>Resources</span>
+                    </a>
+                    <a href="FAQ.html" class="nav-item-custom">
+                        <i class="bi bi-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-item-custom dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="goal_mission_vision.html"><i class="bi bi-bullseye"></i>Our Goal, Mission Vision</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="developers.html"><i class="bi bi-people"></i>Developers</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="contact_us.html"><i class="bi bi-envelope"></i>Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="account-area">
+                    <div class="dropdown">
+                        <a href="login.html" class="login-btn dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                            <span>Log In</span>
+                        </a>
+                         <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html"><i class="bi bi-grid"></i>Dashboard</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=quizzes"><i class="bi bi-bar-chart"></i>Quiz Progress</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=community"><i class="bi bi-people"></i>Community Hub</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=profile"><i class="bi bi-person"></i>Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <header class="timeline-header">
+        <div class="container">
+            <h1>TIMELINE</h1>
+            <p>History of Destructive Earthquakes in Myanmar</p>
+        </div>
+    </header>
+    <main class="container my-5">
+        <div class="timeline-container">
+            <div class="timeline-item left">
+                <div class="timeline-icon">
+                    <i class="bi bi-house-exclamation"></i>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">28 March 2025</div>
+                    <div class="timeline-title">Mandalay-Sagaing</div>
+                    <ul class="timeline-description">
+                        <li>Magnitude: 7.7 Mw (according to the USGS)</li>
+                        <li>Affected areas: Sagaing, Mandalay, and other parts of Myanmar</li>
+                        <li>Impacts: Widespread collapse of buildings, bridges, and religious structures; thousands killed or injured; mass homelessness</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-icon">
+                    <i class="bi bi-house-exclamation"></i>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">24 August 2016</div>
+                    <div class="timeline-title">Chauk–Bagan</div>
+                    <ul class="timeline-description">
+                        <li>Magnitude: 6.8</li>
+                        <li>Affected areas: Chauk, Bagan, and surrounding parts of central Myanmar</li>
+                        <li>Impacts: 389 historical monuments and 17 small monuments damaged; major temples including Sulamani heavily affected</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-icon">
+                    <i class="bi bi-house-exclamation"></i>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">8 July 1975</div>
+                    <div class="timeline-title">Bagan</div>
+                    <ul class="timeline-description">
+                        <li>Magnitude: 6.5 (scientific earthquake catalogue)</li>
+                        <li>Affected areas: Bagan and central Myanmar</li>
+                        <li>Impacts: Major structures and ancient temples collapsed; massive cultural and economic losses</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-icon">
+                    <i class="bi bi-house-exclamation"></i>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">5 May 1930</div>
+                    <div class="timeline-title">Bago & Yangon</div>
+                    <ul class="timeline-description">
+                        <li>Magnitude: 7.2 Mw (other sources report ~7.3–7.4)</li>
+                        <li>Affected areas: Bago, Yangon, and surrounding areas of Lower Myanmar</li>
+                        <li>Impacts: At least 500 deaths in Bago and over 50 in Yangon; building collapses and fires; severe damage to Shwemawdaw Pagoda; ruptured a long section of the Sagaing Fault</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-icon">
+                    <i class="bi bi-house-exclamation"></i>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">5 July 1917</div>
+                    <div class="timeline-title">Bago</div>
+                    <ul class="timeline-description">
+                        <li>Magnitude: Not reliably established in historical reports</li>
+                        <li>Affected areas: Bago and surrounding parts of Lower Myanmar</li>
+                        <li>Impacts: Golden spire and umbrella of Shwemawdaw Pagoda fell; several smaller base pagodas damaged; no deaths reported</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-icon">
+                    <i class="bi bi-house-exclamation"></i>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">23 May 1912</div>
+                    <div class="timeline-title">Maymyo (Pyin Oo Lwin)</div>
+                    <ul class="timeline-description">
+                        <li>Magnitude: Approximately 7.6-7.7 (some report 8.0)</li>
+                        <li>Affected areas: Northern Shan State and surrounding regions</li>
+                        <li>Impacts: Severe damage to buildings and railway infrastructure; caused ground cracks and landslides</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-icon">
+                    <i class="bi bi-house-exclamation"></i>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">23 March 1839</div>
+                    <div class="timeline-title">Ava (Inwa)</div>
+                    <ul class="timeline-description">
+                        <li>Magnitude: Approximately 8.0</li>
+                        <li>Affected areas: Inwa (Ava), Amarapura, Sagaing, and other parts of Myanmar</li>
+                        <li>Impacts: Damaged houses, pagodas, monasteries, and city walls; Mingun Pagoda severely damaged; approx. 300-400 casualties</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer KPPT -->
+     <footer class="website-footer">
+        <div class="footer-container">
+            <div class="row g-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="col-12 col-md-6 col-lg-4 footer-column">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="image/Screenshot 2026-11-04 213028.png" alt="logo" style="background-color: #eef7f6;">
+                        </div>
+                        <h3>EarthWise</h3>
+                    </div>
+                    <p class="footer-description">Explore global seismic history, master life-saving safety practices, and access our interactive emergency preparedness checklists</p>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
+                        <span>location: Zaing North 3 Street, Bago, Myanmar</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
+                        <span>phone no: 09684578048</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
+                        <span>gmail: earthwise005@gmail.com</span>
+                    </div>
+                    <h4 class="social-heading">social media</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@Earthwise005-e4o" class="youtube" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://t.me/earthwise005" class="telegram" aria-label="Telegram">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@earthwise005" class="tiktok" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Earthquake.html">Earthquakes</a></li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">Safety Hub</a>
+                            <button class="footer-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Safety Hub submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item" href="Safety.html">Safety</a></li>
+                                <li><a class="dropdown-item" href="preparedness.html">Preparedness</a></li>
+                                <li><a class="dropdown-item" href="risk-reduction.html">Risk Reduction</a></li>
+                                <li><a class="dropdown-item" href="funtime.html">Fun Time</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">About Us</a>
+                            <button class="footer-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="About Us submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Goal</a></li>
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Mission</a></li>
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Vision</a></li>
+                                <li><a class="dropdown-item" href="developers.html">Developers</a></li>
+                                <li><a class="dropdown-item" href="contact_us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">Log In</a>
+                            <button class="footer-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item login-required" href="dashboard.html">Dashboard</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=quizzes">Quiz Progress</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=community">Community Hub</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=profile">Profile</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="signup.html" class="footer-signup-link"><i class="bi bi-person-plus"></i>Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3 class="footer-heading">Emergency Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="preparedness.html">Emergency Action Guide</a></li>
+                        <li><a href="preparedness.html">Emergency Checklist</a></li>
+                        <li><a href="Safety.html">Official Safety Guidelines</a></li>
+                        <li><a href="https://borgenproject.org/myanmar-after-the-earthquake/">Relief Organisations</a></li>
+                        <li><a class="login-required" href="dashboard.html?section=community">Community support</a></li>
+                    </ul>
+                    <div class="newsletter">
+                        <h3 class="footer-heading">Stay Connected</h3>
+                        <form class="newsletter-form" action="signup.html" method="get">
+                            <input type="email" class="newsletter-input" placeholder="Email address..." aria-label="Email address"required>
+                            <button type="submit" class="signup-button">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3 class="footer-heading">About &amp; Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="goal_mission_vision.html">Our Mission &amp; Vision</a></li>
+                        <li><a href="developers.html">Our Developers</a></li>
+                        <li><a href="resources.html">Sources &amp; References</a></li>
+                        <li><a href="pdf/EarthWise Privacy Policy.pdf">Privacy Policy</a></li>
+                        <li><a href="pdf/EarthWise Terms & Conditions.pdf">Terms &amp; Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Earthwise | Year 9 Fuchsia</p> 
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="modal fade" id="loginRequiredModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content login-required-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Login Required</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <p>Please log in or create an account to access this feature.</p>
+                    <div class="d-flex gap-2 mt-4">
+                        <a href="login.html" class="btn modal-login-btn">Log In</a>
+                        <a href="signup.html" class="btn modal-signup-btn">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login-check.js"></script>
+</body>
+</html>
