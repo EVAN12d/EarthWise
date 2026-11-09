@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="contact_us.css">
+    <link rel="stylesheet" href="login-modal.css">
+</head>
+<body>
+    <!-- Navbar KPPT -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <!-- Website Logo -->
+            <a href="index.html" class="logo" aria-label="Home">
+                <img src="image/Screenshot 2026-11-04 213028.png" alt="logo" style="background-color: #eef7f6;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <div class="nav-links mx-auto">
+                    <a href="index.html" class="nav-item-custom active">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="Earthquake.html" class="nav-item-custom">
+                        <i class="bi bi-globe-asia-australia"></i>
+                        <span>Earthquakes</span>
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-item-custom dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Safety Hub</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="Safety.html"><i class="bi bi-shield-check"></i>Safety</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="preparedness.html"><i class="bi bi-backpack"></i>Preparedness</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="risk-reduction.html"><i class="bi bi-house-check"></i>Risk Reduction</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="funtime.html"><i class="bi bi-controller"></i>Fun Time</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="resources.html" class="nav-item-custom">
+                        <i class="bi bi-journal-bookmark"></i>
+                        <span>Resources</span>
+                    </a>
+                    <a href="FAQ.html" class="nav-item-custom">
+                        <i class="bi bi-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-item-custom dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-info-circle"></i>
+                            <span>About Us</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="goal_mission_vision.html"><i class="bi bi-bullseye"></i>Our Goal, Mission Vision</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="developers.html"><i class="bi bi-people"></i>Developers</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="contact_us.html"><i class="bi bi-envelope"></i>Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="account-area">
+                    <div class="dropdown">
+                        <a href="#" class="login-btn dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                            <span>Log In</span>
+                        </a>
+                         <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html"><i class="bi bi-grid"></i>Dashboard</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=quizzes"><i class="bi bi-bar-chart"></i>Quiz Progress</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=community"><i class="bi bi-people"></i>Community Hub</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item login-required" href="dashboard.html?section=profile"><i class="bi bi-person"></i>Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-intro">
+                <span class="section-label">GET IN TOUCH</span>
+                <h1>Let's Start a <span>Conversation.</span></h1>
+                <p>
+                    Have a question, suggestion, or feedback?
+                    We'd love to hear from you. Reach out and
+                    we'll be happy to connect.
+                </p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <div class="form-heading">
+                        <h3>Send Us a Message</h3>
+                        <p>Fill in the form below to get in touch with our team.</p>
+                    </div>
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" class="form-control"
+                                    placeholder="Enter your name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control"
+                                    placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control"
+                                placeholder="What is your message about?" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control"
+                                rows="5" placeholder="Write your message here..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="send-button">
+                            Send Message <i class="bi bi-arrow-right"></i>
+                        </button>
+                        <p id="formMessage" class="form-message"></p>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-heading">
+                        <span>CONTACT INFORMATION</span>
+                        <h3>We're Here to Help.</h3>
+                        <p>
+                            Whether you have questions about our
+                            project or want to share your thoughts,
+                            feel free to contact us.
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div>
+                            <h6>Email Us</h6>
+                            <p>earthwise005@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div>
+                            <h6>Our Location</h6>
+                            <p>Zaing North 3 Street, Bago Myanmar</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-clock"></i>
+                        </div>
+                        <div>
+                            <h6>Response Time</h6>
+                            <p>We'll respond as soon as possible.</p>
+                        </div>
+                    </div>
+                    <div class="social-section">
+                        <h6>CONNECT WITH US</h6>
+                        <div class="social-links">
+                            <a href="https://t.me/earthwise005" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                                <i class="bi bi-telegram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@earthwise005" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                                <i class="bi bi-tiktok"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@Earthwise005-e4o" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="contact-bottom">
+                <h4>Still Have Questions?</h4>
+                <p>Visit our FAQ section to find answers to common questions.</p>
+                <a href="faq.html">Explore FAQs <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer KPPT -->
+     <footer class="website-footer">
+        <div class="footer-container">
+            <div class="row g-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="col-12 col-md-6 col-lg-4 footer-column">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="image/Screenshot 2026-11-04 213028.png" alt="logo" style="background-color: #eef7f6;">
+                        </div>
+                        <h3>EarthWise</h3>
+                    </div>
+                    <p class="footer-description">Explore global seismic history, master life-saving safety practices, and access our interactive emergency preparedness checklists</p>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
+                        <span>location: Zaing North 3 Street, Bago, Myanmar</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
+                        <span>phone no: 09684578048</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
+                        <span>gmail: earthwise005@gmail.com</span>
+                    </div>
+                    <h4 class="social-heading">social media</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@Earthwise005-e4o" class="youtube" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://t.me/earthwise005" class="telegram" aria-label="Telegram">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@earthwise005" class="tiktok" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Earthquake.html">Earthquakes</a></li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">Safety Hub</a>
+                            <button class="footer-dropdown-button" type="button"data-bs-toggle="dropdown" aria-expanded="false" aria-label="Safety Hub submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item" href="Safety.html">Safety</a></li>
+                                <li><a class="dropdown-item" href="preparedness.html">Preparedness</a></li>
+                                <li><a class="dropdown-item" href="risk-reduction.html">Risk Reduction</a></li>
+                                <li><a class="dropdown-item" href="funtime.html">Fun Time</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">About Us</a>
+                            <button class="footer-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="About Us submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Goal</a></li>
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Mission</a></li>
+                                <li><a class="dropdown-item" href="goal_mission_vision.html">Our Vision</a></li>
+                                <li><a class="dropdown-item" href="developers.html">Developers</a></li>
+                                <li><a class="dropdown-item" href="contact_us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-dropdown dropdown">
+                            <a href="#" class="footer-main-link">Log In</a>
+                            <button class="footer-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account submenu">
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu footer-menu">
+                                <li><a class="dropdown-item login-required" href="dashboard.html">Dashboard</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=quizzes">Quiz Progress</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=community">Community Hub</a></li>
+                                <li><a class="dropdown-item login-required" href="dashboard.html?section=profile">Profile</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="signup.html" class="footer-signup-link"><i class="bi bi-person-plus"></i>Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3 class="footer-heading">Emergency Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="preparedness.html">Emergency Action Guide</a></li>
+                        <li><a href="preparedness.html">Emergency Checklist</a></li>
+                        <li><a href="Safety.html">Official Safety Guidelines</a></li>
+                        <li><a href="https://borgenproject.org/myanmar-after-the-earthquake/">Relief Organisations</a></li>
+                        <li><a class="login-required" href="dashboard.html?section=community">Community support</a></li>
+                    </ul>
+                    <div class="newsletter">
+                        <h3 class="footer-heading">Stay Connected</h3>
+                        <form class="newsletter-form" action="signup.html" method="get">
+                            <input type="email" class="newsletter-input" placeholder="Email address..." aria-label="Email address"required>
+                            <button type="submit" class="signup-button">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3 class="footer-heading">About &amp; Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="goal_mission_vision.html">Our Mission &amp; Vision</a></li>
+                        <li><a href="developers.html">Our Developers</a></li>
+                        <li><a href="resources.html">Sources &amp; References</a></li>
+                        <li><a href="pdf/EarthWise Privacy Policy.pdf">Privacy Policy</a></li>
+                        <li><a href="pdf/EarthWise Terms & Conditions.pdf">Terms &amp; Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Earthwise | Year 9 Fuchsia</p>
+            </div>
+        </div>
+    </footer>
+    <script src="contact_us.js"></script>
+    <div class="modal fade" id="loginRequiredModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content login-required-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Login Required</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <p>Please log in or create an account to access this feature.</p>
+                    <div class="d-flex gap-2 mt-4">
+                        <a href="login.html" class="btn modal-login-btn">Log In</a>
+                        <a href="signup.html" class="btn modal-signup-btn">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login-check.js"></script>
+</body>
+</html>
