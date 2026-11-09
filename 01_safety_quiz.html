@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <span class="quiz-label">Safety Protocol</span>
+            <a href="dashboard.html" class="exit-btn">Exit</a>
+        </div>
+
+        <div id="questionPage" class="question-container">
+            <p id="questionNumber"></p>
+            <h2 id="questionText"></h2>
+            <div id="answerOptions"></div>
+            <button id="nextBtn" onclick="nextQuestion()">Next Question</button>
+        </div>
+
+        <div id="resultPage" class="result-container" style="display: none;">
+            <div class="row g-3">
+                <div class="col-md-5">
+                    <div class="result-card">
+                        <span class="result-label">Score</span>
+                        <h1 id="finalScore">0/5</h1>
+                        <p id="scoreMessage"></p>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="result-card">
+                        <span class="result-label">Received Points</span>
+                        <h1 id="finalPoints">0</h1>
+                        <p id="pointsMessage"></p>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="answer-heading">Answer Review</h5>
+
+            <div class="accordion" id="answerReview"></div>
+            <div class="row g-3 mt-2">
+                <div class="col-md-7">
+                    <a href="./dashboard.html" class="result-btn">Back to main page</a>
+                </div>
+                <div class="col-md-5">
+                    <button class="result-btn" onclick="restartQuiz()">Retake quiz </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- External JavaScript -->
+    <script src="01_safety_quiz.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

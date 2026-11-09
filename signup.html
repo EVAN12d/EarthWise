@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarthWise | Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <a href="index.html" class="logo">
+                <img src="image/Screenshot 2026-11-04 213028.png" alt="logo" style="background-color: #eef7f6;">
+            </a>
+            <a href="index.html" class="back-link">
+                <i class="bi bi-arrow-left"></i> Back to website
+            </a>
+        </div>
+        <div class="row align-items-center justify-content-between signup-section">
+            <div class="col-lg-5">
+                <div class="intro">
+                    <span class="small-title">WELCOME TO EARTHWISE</span>
+                    <h1>Start your journey towards a safer tomorrow.</h1>
+                    <p>Sign up to access your dashboard, track quiz scores, manage your profile, and share posts with the EarthWise community.</p>
+                    <div class="intro-line"></div>
+                    <div class="intro-bottom">
+                        <i class="bi bi-shield-check"></i>
+                        <span>Awareness today. Preparedness tomorrow.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="form-section">
+                    <h2>Create an account</h2>
+                    <p class="form-description">Fill up your details to get started.</p>
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your full name" autocomplete="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email address" autocomplete="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" class="form-control" placeholder="Create a password" autocomplete="new-password" minlength="8" required>
+                            <p class="password-hint">Must contain at least 8 characters.</p>
+                        </div>
+                        <button type="submit" class="register-btn">
+                            Create Account <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+                    <p class="login-text">Already have an account? <a href="login.html">Log in</a></p>
+                    <div class="form-footer">
+                        <a href="pdf/EarthWise Privacy Policy.pdf">Privacy Policy</a>
+                        <span>.</span>
+                        <a href="pdf/EarthWise Terms & Conditions.pdf">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-footer">
+            <p>© 2026 EarthWise. Earthquake Awareness & Preparedness.</p>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>

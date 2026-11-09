@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuakeReady | Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+    <script>
+        if (sessionStorage.getItem("loggedIn") !== "true") {
+            window.location.replace("login.html");
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container-fluid dashboard-layout">
+        <div class="row g-3">
+            <!-- Side bar -->
+            <div class="col-lg-2">
+                <div class="sidebar">
+                    <div class="sidebar-top">
+                        <div class="sidebar-welcome">
+                            <h3>Hello there!</h3>
+                            <p>Welcome to your own space of EarthWise! Stay prepared, track your progress and explore more with us.</p>
+                        </div>
+
+                        <div class="nav flex-column nav-pills" role="tablist">
+                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#dashboard" type="button">
+                                <i class="bi bi-grid-1x2 me-2"></i> My dashboard
+                            </button>
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#quizzes" type="button">
+                                <i class="bi bi-journal-check me-2"></i> Take quiz
+                            </button>
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#community" type="button">
+                                <i class="bi bi-people me-2"></i> Community Hub
+                            </button>
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#profile" type="button">
+                                <i class="bi bi-person-circle me-2"></i> Your Profile
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-bottom">
+                        <a href="index.html" class="logout-btn">
+                            <i class="bi bi-box-arrow-right"></i>
+                            Log Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab pane contents -->
+             <div class="col-lg-10">
+                <div class="tab-content">
+                    <!-- Dashboard -->
+                    <div class="tab-pane fade show active" id="dashboard">
+                        <div class="row g-3">
+                            <div class="col-xl-8">
+
+                                <!-- Quiz results -->
+                                <section class="section-box">
+                                    <h3>Quiz results</h3>
+                                    <div class="row g-3">
+                                        <div class="col-md-4">
+                                            <div class="result-card">
+                                                <h4><i class="bi bi-shield-check"></i> Safety</h4>
+                                                <h3 id="safetyPercent">0%</h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar" id="safetyBar"></div>
+                                                </div>
+                                                <button class="teal-btn mt-3" onclick="openQuizTab()">Take quiz <i class="button-arrow-icon bi bi-arrow-up-right"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="result-card">
+                                                <h4><i class="bi bi-flask"></i> Scientific</h4>
+                                                <h3 id="sciencePercent">0%</h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar" id="scienceBar"></div>
+                                                </div>
+                                                <button class="teal-btn mt-3" onclick="openQuizTab()">Take quiz <i class="button-arrow-icon bi bi-arrow-up-right"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="result-card">
+                                                <h4><i class="bi bi-globe"></i> Geography</h4>
+                                                <h3 id="geographyPercent">0%</h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar" id="geographyBar"></div>
+                                                </div>
+                                                <button class="teal-btn mt-3" onclick="openQuizTab()">Take quiz <i class="button-arrow-icon bi bi-arrow-up-right"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <!-- Emergency Checklist -->
+                                <section class="section-box mt-3">
+                                    <h3>Emergency checklist</h3>
+                                    <p class="section-description">Start preparing an emergency kit in case of an unexpected earthquake emergency. Tick off the boxes if you have the essential items from below. Your readiness score will appear in the chart shown above on the side.</p>
+
+                                    <div class="row g-2">
+
+                                        <div class="col-md-4">
+                                            <label class="check-card">
+                                                <h5>Water</h5>
+                                                <p>Keep enough drinking water for emergencies.</p>
+                                                <input type="checkbox" class="check-item">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label class="check-card">
+                                                <h5>First aid kit</h5>
+                                                <p>Prepare supplies for minor injuries.</p>
+                                                <input type="checkbox" class="check-item">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label class="check-card">
+                                                <h5>Torch</h5>
+                                                <p>Provides light during power outages.</p>
+                                                <input type="checkbox" class="check-item">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label class="check-card">
+                                                <h5>Canned food</h5>
+                                                <p>Food that can be stored for emergencies.</p>
+                                                <input type="checkbox" class="check-item">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label class="check-card">
+                                                <h5>Radio</h5>
+                                                <p>Receive emergency news and updates.</p>
+                                                <input type="checkbox" class="check-item">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label class="check-card">
+                                                <h5>Important documents</h5>
+                                                <p>Protect essential identification records.</p>
+                                                <input type="checkbox" class="check-item">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label class="check-card">
+                                                <h5>Fire extinguisher</h5>
+                                                <p>Keep one available and learn safe use.</p>
+                                                <input type="checkbox" class="check-item">
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </section>
+
+                                <!-- Donation section -->
+                                <section class="section-box mt-3">
+                                    <h3>Donation</h3>
+                                    <p class="section-description">Use your earned points from completing educational quizzes and make virtual donations of essential supplies to earthquake-affected communities. This feature is designed to raise awareness of humanitarian needs and encourage community.</p>
+
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <div class="donation-card">
+                                                <div><h5>Clean drinking water</h5><span>250 points</span></div>
+                                                <button class="teal-btn donate-btn">Donate Points</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="donation-card">
+                                                <div><h5>Non-perishable food</h5><span>300 points</span></div>
+                                                <button class="teal-btn donate-btn">Donate Points</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="donation-card">
+                                                <div><h5>First-aid supplies</h5><span>500 points</span></div>
+                                                <button class="teal-btn donate-btn">Donate Points</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="donation-card">
+                                                <div><h5>Blankets and towels</h5><span>600 points</span></div>
+                                                <button class="teal-btn donate-btn">Donate Points</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="donation-card">
+                                                <div><h5>Hygiene kits</h5><span>600 points</span></div>
+                                                <button class="teal-btn donate-btn">Donate Points</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="donation-card">
+                                                <div><h5>Clean clothing</h5><span>450 points</span></div>
+                                                <button class="teal-btn donate-btn">Donate Points</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="donation-card">
+                                                <div><h5>School supplies</h5><span>400 points</span></div>
+                                                <button class="teal-btn donate-btn">Donate Points</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="donation-card">
+                                                <div><h5>Shelter supplies</h5><span>750 points</span></div>
+                                                <button class="teal-btn donate-btn">Donate Points</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </section>
+
+                            </div>
+
+                            <div class="col-xl-4">
+                                <!-- Earthquake Readiness chart -->
+                                <section class="section-box">
+                                    <h3>Earthquake readiness</h3>
+                                    <div class="readiness-chart" id="readinessChart">
+                                        <div class="chart-center">
+                                            <strong id="readinessPercent">0%</strong>
+                                            <small>Ready</small>
+                                        </div>
+                                    </div>
+                                    <p class="text-center mt-3 mb-0" id="readinessCount">0 of 7 items prepared</p>
+                                </section>
+
+                                <!-- Volunteer groups display -->
+                                <section class="section-box mt-3">
+                                    <h3>Volunteer Groups</h3>
+                                    <p class="section-description">Trust-worthy and reliable programs, confidently recommended by EarthWise.</p>
+
+                                    <div class="volunteer-card">
+                                        <h5>Relief Distribution Team</h5>
+                                        <p>Distributes food, clean water, clothing and supplies to affected families.</p>
+                                        <a href="https://www.ri.org/countries/myanmar/" target="_blank"><button class="teal-btn view-btn">Visit <i class="button-arrow-icon bi bi-arrow-up-right"></i></button></a>
+                                    </div>
+
+                                    <div class="volunteer-card">
+                                        <h5>First Aid Support Team</h5>
+                                        <p>Provides basic first aid within training and connects people with medical professionals.</p>
+                                        <a href="https://www.redcross.org.mm/our-work/first-aid-safety-services/" target="_blank"><button class="teal-btn view-btn">Visit <i class="button-arrow-icon bi bi-arrow-up-right"></i></button></a>
+                                    </div>
+
+                                    <div class="volunteer-card">
+                                        <h5>Awareness and Education Team</h5>
+                                        <p>Teaches communities earthquake safety and emergency preparedness.</p>
+                                        <a href="https://www.wvi.org/disaster-risk-reduction-response-myanmar" target="_blank"><button class="teal-btn view-btn">Visit <i class="button-arrow-icon bi bi-arrow-up-right"></i></button></a>
+                                    </div>
+
+                                    <div class="volunteer-card">
+                                        <h5>Search and Rescue Team</h5>
+                                        <p>Professional rescue work requires specialized training. Learn about approved training opportunities.</p>
+                                        <a href="https://www.redcross.org.mm/news-and-multimedia/second-safety-and-disaster-management-training-for-emergency-search-and-rescue-team-members-held-in-nay-pyi-taw/" target="_blank"><button class="teal-btn view-btn">Visit <i class="button-arrow-icon bi bi-arrow-up-right"></i></button></a>
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz section -->
+                    <div class="tab-pane fade" id="quizzes">
+
+                        <section class="section-box">
+                            <h3>Safety Protocol</h3>
+                            <p>Tests knowledge of safety measures before, during and after an earthquake.</p>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="quiz-card">
+                                        <span class="points-label">200 points</span>
+                                        <div class="quiz-picture"><i class="bi bi-phone-vibrate"></i></div>
+                                        <h3>Before an earthquake</h3>
+                                        <p>Preparing emergency kits, securing furniture and planning evacuation routes.</p>
+                                        <a href="01_safety_quiz.html?quiz=0" class="teal-btn quiz-btn" data-question="0">Take quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="quiz-card">
+                                        <span class="points-label">200 points</span>
+                                        <div class="quiz-picture"><i class="bi bi-person-arms-up"></i></div>
+                                        <h3>During an earthquake</h3>
+                                        <p>Drop, Cover, and Hold On and staying safe indoors or outdoors.</p>
+                                        <a href="01_safety_quiz.html?quiz=1" class="teal-btn quiz-btn" data-question="1">Take quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="quiz-card">
+                                        <span class="points-label">200 points</span>
+                                        <div class="quiz-picture"><i class="bi bi-house-exclamation"></i></div>
+                                        <h3>After an earthquake</h3>
+                                        <p>Aftershock precautions, checking hazards and following official updates.</p>
+                                        <a href="01_safety_quiz.html?quiz=2" class="teal-btn quiz-btn" data-question="2">Take quiz</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section-box mt-3">
+                            <h3>Scientific Knowledge</h3>
+                            <p>Tests understanding of tectonic plates, seismic waves and earthquake impacts.</p>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="quiz-card">
+                                        <span class="points-label">300 points</span>
+                                        <div class="quiz-picture"><i class="bi bi-globe-asia-australia"></i></div>
+                                        <h3>Tectonic Plate Movements</h3>
+                                        <p>How tectonic plates interact and cause earthquakes.</p>
+                                        <a href="01_safety_quiz.html?quiz=3" class="teal-btn quiz-btn" data-question="3">Take quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="quiz-card">
+                                        <span class="points-label">300 points</span>
+                                        <div class="quiz-picture"><i class="bi bi-activity"></i></div>
+                                        <h3>Seismic Waves</h3>
+                                        <p>How P-waves, S-waves and surface waves travel through Earth.</p>
+                                        <a href="01_safety_quiz.html?quiz=4" class="teal-btn quiz-btn" data-question="4">Take quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="quiz-card">
+                                        <span class="points-label">300 points</span>
+                                        <div class="quiz-picture"><i class="bi bi-layers"></i></div>
+                                        <h3>Effects on Earth's Surface</h3>
+                                        <p>Ground shaking, surface rupture, landslides and liquefaction.</p>
+                                        <a href="01_safety_quiz.html?quiz=5" class="teal-btn quiz-btn" data-question="5">Take quiz</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section-box mt-3">
+                            <h3>Geography</h3>
+                            <p>Explore earthquake locations, fault lines and risk areas.</p>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="quiz-card">
+                                        <span class="points-label">350 points</span>
+                                        <div class="quiz-picture"><i class="bi bi-map"></i></div>
+                                        <h3>Myanmar Fault Lines</h3>
+                                        <p>Learn about the Sagaing Fault and earthquakes in Myanmar.</p>
+                                        <a href="01_safety_quiz.html?quiz=6" class="teal-btn quiz-btn" data-question="6">Take quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="quiz-card">
+                                        <span class="points-label">350 points</span>
+                                        <div class="quiz-picture"><i class="bi bi-geo-alt"></i></div>
+                                        <h3>Epicenters</h3>
+                                        <p>Learn how earthquake epicenters are located.</p>
+                                        <a href="01_safety_quiz.html?quiz=7" class="teal-btn quiz-btn" data-question="7">Take quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="quiz-card">
+                                        <span class="points-label">350 points</span>
+                                        <div class="quiz-picture"><i class="bi bi-buildings"></i></div>
+                                        <h3>Earthquake Risk</h3>
+                                        <p>Explore how location and building conditions affect risk.</p>
+                                        <a href="01_safety_quiz.html?quiz=8" class="teal-btn quiz-btn" data-question="8">Take quiz</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Community hub -->
+                     <div class="tab-pane fade" id="community">
+                        <div class="row g-2 category-bar">
+                            <div class="col-6 col-md-3"><button class="category-btn active" data-filter="all">General</button></div>
+                            <div class="col-6 col-md-3"><button class="category-btn" data-filter="volunteer">Volunteer programs</button></div>
+                            <div class="col-6 col-md-3"><button class="category-btn" data-filter="community">Community posts</button></div>
+                            <div class="col-6 col-md-3"><button class="category-btn" data-filter="donation">Donation deeds</button></div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-lg-4 order-lg-2">
+                                <div class="section-box create-post">
+                                    <h3>Create a post</h3>
+                                    <form id="postForm">
+                                        <select class="form-select mb-3" id="postType">
+                                            <option value="all">General</option>
+                                            <option value="volunteer">Volunteer programs</option>
+                                            <option value="community">Community posts</option>
+                                            <option value="donation">Donation deeds</option>
+                                        </select>
+                                        <input class="form-control mb-3" id="postTitle" placeholder="Title" required maxlength="100">
+                                        <textarea class="form-control mb-3" id="postText" rows="8" placeholder="What's on your mind? Share your thoughts with the community..." required maxlength="1000"></textarea>
+                                        <button class="teal-btn w-100" type="submit">Post</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 order-lg-1">
+                                <div class="section-box" id="postsContainer">
+                                    <div class="community-post">
+                                        <div class="post-header">
+                                            <div class="post-avatar">MM</div>
+                                            <div>
+                                                <h6>Meikswe Myanmar</h6>
+                                                <small>Volunteer program</small>
+                                            </div>
+                                        </div>
+                                        <h5>Interested in working as a volunteer?</h5>
+                                        <p>We, Meikswe Myanmar, envisions a peaceful and healthy social life for all people in Myanmar. Our mission is to improve the sustainable social lives of women, children, and vulnerable communities. We achieve this through capacity building, social networking, coordination, cooperation, and providing technical assistance, essential support, and infrastructure. So, we invite you to join us!</p>
+                                    </div>
+                                    <div class="community-post">
+                                        <div class="post-header">
+                                            <div class="post-avatar">CT</div>
+                                            <div>
+                                                <h6>Community Safety Team</h6>
+                                                <small>Community posts</small>
+                                            </div>
+                                        </div>
+                                        <h5>Join Our Earthquake Awareness Campaign!</h5>
+                                        <p>We're looking for students who want to help spread earthquake safety awareness in their communities. Volunteers can help design posters, share safety tips, and teach others how to prepare for earthquakes. Even small actions can make a difference!</p>
+                                    </div>
+                                    <div class="community-post">
+                                        <div class="post-header">
+                                            <div class="post-avatar">SC</div>
+                                            <div>
+                                                <h6>Save the Children</h6>
+                                                <small>Volunteer program</small>
+                                            </div>
+                                        </div>
+                                        <h5>Calling in passionate peers</h5>
+                                        <p>Every day, we help children grow up healthy, learn safely, and live free from harm, including those from the most remote and challenging areas of the country - Myanmar. We were involved in the major central earthquake of Myanmar and now recruiting more members for emergency services. Contact us to learn more about the program or check our website.</p>
+                                    </div>
+                                    <div class="community-post">
+                                        <div class="post-header">
+                                            <div class="post-avatar">MT</div>
+                                            <div>
+                                                <h6>May Thiri</h6>
+                                                <small>Personal blogs</small>
+                                            </div>
+                                        </div>
+                                        <h5>Why I Started Preparing an Emergency Kit</h5>
+                                        <p>I used to think emergency kits weren't necessary until I learned how quickly disasters can happen. Now I keep a flashlight, water, basic first aid supplies, and important contacts ready at home.</p>
+                                    </div>
+                                    <div class="community-post">
+                                        <div class="post-header">
+                                            <div class="post-avatar">MK</div>
+                                            <div>
+                                                <h6>Min Khant</h6>
+                                                <small>Donation deeds</small>
+                                            </div>
+                                        </div>
+                                        <h5>May all the people in need be provided</h5>
+                                        <p>I used the quizzes offered by the website to donate to people in need. I mostly focused on the essential supplies like water and food. What I'm really satisfied about is that not only did I make a good deed, I also had fun doing it.</p>
+                                    </div>
+                                    <div class="community-post">
+                                        <div class="post-header">
+                                            <div class="post-avatar">HM</div>
+                                            <div>
+                                                <h6>Helping Hands Myanmar</h6>
+                                                <small>Donation deeds</small>
+                                            </div>
+                                        </div>
+                                        <h5>Supporting Families Affected by Earthquakes</h5>
+                                        <p>Many families face difficulties after an earthquake, especially when their homes and belongings are damaged. Our community is planning to collect essential supplies such as clean water, blankets, and hygiene products to support affected families.</p>
+                                    </div>
+                                    <div class="community-post">
+                                        <div class="post-header">
+                                            <div class="post-avatar">AP</div>
+                                            <div>
+                                                <h6>Aawareness Program</h6>
+                                                <small>Community posts</small>
+                                            </div>
+                                        </div>
+                                        <h5>Earthquake Education Awareness for Kids</h5>
+                                        <p>We're starting a program to spread awareness for earthquake education among kids aging from 5 to 9. If you're interested, please send an get in touch with us through this gmail - awarenesscampaign@gmail.com.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile -->
+                     <div class="tab-pane fade" id="profile">
+                        <div class="row g-3">
+                            <div class="col-lg-5">
+
+                                <section class="section-box profile-box text-center">
+                                    <span class="tag">Profile</span>
+                                    <div class="profile-avatar"><i class="bi bi-person"></i></div>
+                                    <h3 id="profileName">User</h3>
+                                </section>
+
+                                <section class="section-box mt-3">
+                                    <h4>Personal Information</h4>
+                                    <form id="profileForm">
+                                        <input type="text" class="form-control mb-2" id="fullName" placeholder="Full name" maxlength="80">
+                                        <input type="email" class="form-control mb-2" id="email" placeholder="Email">
+                                        <input type="tel" class="form-control mb-2" id="phone" placeholder="Phone number">
+                                        <textarea class="form-control mb-2" id="description" placeholder="Description"></textarea>
+                                        <button class="teal-btn" type="submit">Save Profile</button>
+                                    </form>
+                                </section>
+                            </div>
+
+                            <div class="col-lg-7">
+                                <section class="section-box">
+                                    <h4>Achievement Overview</h4>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="stat-card">
+                                                <h5>Total points:</h5>
+                                                <h1 id="totalPoints">0</h1>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="stat-card">
+                                                <h5>Record:</h5>
+                                                <div id="activityRecord" class="activity-scroll">No activity yet</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3 mt-1">
+                                        <div class="col-md-4">
+                                            <div class="stat-card text-center">
+                                                <h1 id="quizCount">0</h1>
+                                                <h4>Quiz</h4>
+                                                <p>Completed</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="stat-card text-center">
+                                                <h1 id="donationCount">0</h1>
+                                                <h4>Donation</h4>
+                                                <p>Done</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="stat-card text-center">
+                                                <h1 id="postCount">0</h1>
+                                                <h4>Posts</h4>
+                                                <p>Uploaded</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="section-box mt-3">
+                                    <h4>Vision board</h4>
+                                    <div class="d-flex gap-2">
+                                        <input class="form-control" id="goalInput" placeholder="Goal name">
+                                        <button class="teal-btn" id="addGoal">Add</button>
+                                    </div>
+                                    <div id="goalList" class="mt-3"></div>
+                                </section>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="dashboard.js"></script>
+    <script src="account.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
