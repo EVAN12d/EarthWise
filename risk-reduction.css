@@ -1101,3 +1101,7 @@ p {
         padding: 20px;
     }
 }
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
