@@ -4,7 +4,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     let email = document.getElementById("email").value.trim();
     let savedEmail = localStorage.getItem("earthwiseEmail");
 
-    if (email !== savedEmail || !savedEmail) {
+    if (!savedEmail || email !== savedEmail) {
         alert("Account not found. Please sign up first.");
         return;
     }
