@@ -11,7 +11,7 @@ body {
     font-family: 'DM Sans', sans-serif;
 }
 h1, h2, h3, h4 {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 800;
 }
 h2 {
@@ -36,7 +36,9 @@ p {
     font-weight: 600;
     max-width: 800px;
 }
+
 /* Navbar */
+
 .navbar-custom {
     max-width: 1300px;
     min-height: 68px;
@@ -181,6 +183,7 @@ p {
     width: 22px;
     height: 22px;
 }
+
 @media (max-width: 1199.98px) {
     .navbar-custom {
         padding: 10px 15px;
@@ -279,7 +282,9 @@ p {
         transition: none;
     }
 }
+
 /* Footer */
+
 .website-footer {
     background: linear-gradient(
         180deg,
@@ -529,10 +534,6 @@ p {
     font-size: 10px;
     margin-right: 3px;
 }
-.signup-inner i {
-    font-size: 10px;
-    margin-right: 3px;
-}
 .signup-message {
     font-size: 12px;
     margin-top: 8px;
@@ -550,6 +551,7 @@ p {
 .footer-bottom p {
     margin: 0;
 }
+
 @media (max-width: 991.98px) {
     .website-footer {
         padding: 35px 5% 18px;
@@ -620,24 +622,29 @@ p {
         margin-bottom: 5px !important;
     }
 }
+
 /* Hero Section */
+
 .hero-section {
     min-height: 610px;
     display: flex;
     align-items: center;
     background-color: #edf7f5;
 }
+
 .hero-section h1 {
     font-size: 55px;
     line-height: 1.3;
     color: #245350;
 }
+
 .hero-description {
     font-size: 22px;
     font-weight: 600;
     color: #619da1;
     max-width: 650px;
 }
+
 .main-btn {
     display: inline-block;
     background-color: #b8e1d8;
@@ -648,13 +655,16 @@ p {
     font-weight: 700;
     transition: 0.3s;
 }
+
 .main-btn i {
     margin-left: 8px;
 }
+
 .main-btn:hover {
     background-color: #2d8a76;
     color: white;
 }
+
 .hero-image {
     width: 440px;
     max-width: 100%;
@@ -664,15 +674,19 @@ p {
     border-radius: 50%;
     border: 15px solid #46988e;
 }
+
 /* Risk Zones Section */
+
 .risk-zones {
     background-color: #edf7f5;
 }
+
 .white-section {
     background-color: white;
     padding: 60px;
     border-radius: 30px;
 }
+
 .map-image {
     width: 100%;
     max-height: 450px;
@@ -680,6 +694,7 @@ p {
     border-radius: 15px;
     margin-top: 20px;
 }
+
 .fault-card {
     background-color: white;
     border: 1px solid #e1eae5;
@@ -687,20 +702,24 @@ p {
     padding: 25px;
     box-shadow: 0 12px 36px rgba(44, 96, 91, 0.055);
 }
+
 .fault-image {
     width: 100%;
     height: 230px;
     object-fit: cover;
     border-radius: 15px;
 }
+
 .fault-card h3 {
     font-size: 23px;
     margin-bottom: 15px;
 }
+
 .fault-card p {
     font-size: 15px;
     color: #4f8587;
 }
+
 .fact-box {
     background-color: #e9f6f4;
     padding: 20px;
@@ -708,26 +727,33 @@ p {
     display: flex;
     gap: 15px;
 }
+
 .fact-box i {
     font-size: 30px;
     color: #278b83;
 }
+
 .fact-box h4 {
     font-size: 20px;
     color: #278b83;
 }
+
 .fact-box p {
     margin-bottom: 0;
 }
+
 /* Earthquake Damage Section */
+
 .damage-section {
     background-color: #edf7f5;
 }
+
 .damage-container {
     background-color: #fbfdfd;
     padding: 60px;
     border-radius: 30px;
 }
+
 .factor-card {
     background-color: #edf7f5;
     padding: 20px 12px;
@@ -735,6 +761,7 @@ p {
     text-align: center;
     height: 100%;
 }
+
 .factor-icon {
     width: 65px;
     height: 65px;
@@ -747,15 +774,18 @@ p {
     margin: 0 auto 15px;
     font-size: 28px;
 }
+
 .factor-card h4 {
     font-size: 17px;
     margin-bottom: 12px;
 }
+
 .factor-card p {
     font-size: 13px;
     color: #4f8587;
     margin-bottom: 0;
 }
+
 .building-card {
     background-color: #eaf6f4;
     padding: 15px;
@@ -763,6 +793,7 @@ p {
     height: 100%;
     text-align: center;
 }
+
 .building-label {
     display: inline-block;
     color: white;
@@ -772,12 +803,15 @@ p {
     font-weight: 700;
     margin-bottom: 15px;
 }
+
 .weak-label {
     background-color: #d83560;
 }
+
 .strong-label {
     background-color: #209b55;
 }
+
 .building-image {
     width: 100%;
     height: 220px;
@@ -785,6 +819,7 @@ p {
     border-radius: 12px;
     margin-bottom: 15px;
 }
+
 .building-card ul {
     text-align: left;
     padding-left: 20px;
@@ -792,15 +827,17 @@ p {
     font-weight: 600;
     color: #245350;
 }
+
 .building-card li {
     margin-bottom: 8px;
 }
+
 .reduce-section {
     background-color: #edf7f5;
 }
+
 .strategy-card {
     display: block;
-    position: relative;
     background-color: white;
     border: 1px solid #e1eae5;
     border-radius: 16px;
@@ -811,47 +848,50 @@ p {
     box-shadow: 0 12px 36px rgba(44, 96, 91, 0.055);
     transition: 0.3s;
 }
+
 .strategy-card:hover {
     transform: translateY(-5px);
     color: #245350;
 }
+
 .strategy-card img {
     width: 100%;
     height: 160px;
     object-fit: cover;
 }
+
 .strategy-content {
     display: flex;
     align-items: flex-start;
     gap: 12px;
     padding: 18px;
 }
-.strategy-content > div {
-    min-width: 0;
-}
+
 .strategy-content > i:first-child {
     background-color: #e5f4f1;
     color: #238b85;
     font-size: 23px;
     padding: 10px;
     border-radius: 50%;
-    flex-shrink: 0;
 }
+
 .strategy-content h4 {
     font-size: 16px;
     margin-bottom: 10px;
 }
+
 .strategy-content p {
     font-size: 14px;
     color: #4f8587;
     margin-bottom: 0;
 }
+
 .arrow-icon {
     color: #2d8a76;
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
+    margin-left: auto;
+    align-self: flex-end;
 }
+
 .action-banner {
     background: linear-gradient(105deg, #123f40, #2d7772);
     border-radius: 16px;
@@ -862,13 +902,16 @@ p {
     gap: 30px;
     color: white;
 }
+
 .action-banner h2 {
     color: white;
 }
+
 .action-banner p {
     max-width: 600px;
     font-size: 16px;
 }
+
 .banner-btn {
     display: inline-block;
     background-color: white;
@@ -878,6 +921,7 @@ p {
     font-weight: 700;
     text-decoration: none;
 }
+
 .banner-content {
     background-image: url();
 }
@@ -885,15 +929,18 @@ p {
     background-color: #b8e1d8;
     color: #194d4a;
 }
+
 .outline-btn {
     background-color: transparent;
     border: 1px solid white;
     color: white;
 }
+
 .outline-btn:hover {
     background-color: white;
     color: #194d4a;
 }
+
 .quote-box {
     border: 1px solid #a0c2c1;
     border-radius: 15px;
@@ -901,16 +948,20 @@ p {
     min-width: 230px;
     max-width: 270px;
 }
+
 .quote-box i {
     font-size: 30px;
 }
+
 .quote-box p {
     font-style: italic;
     margin-bottom: 0;
 }
+
 .solutions-section {
     background-color: #eaf6f4;
 }
+
 .solution-card {
     width: 100%;
     height: 100%;
@@ -922,105 +973,131 @@ p {
     color: #2c7475;
     transition: 0.3s;
 }
+
 .solution-card:hover {
     background-color: #e1f3ef;
     border-color: #58ada5;
 }
+
 .solution-card.active {
     background-color: #cdebe6;
     border-color: #58ada5;
 }
+
 .solution-card > i {
     font-size: 28px;
 }
+
 .solution-card h3 {
     font-size: 20px;
     margin: 15px 0;
 }
+
 .solution-card p {
     color: #4f8587;
     font-size: 15px;
 }
+
 .solution-card span {
     font-weight: 700;
     font-size: 14px;
 }
+
 .solution-detail {
     background-color: white;
     border: 1px solid #e1eae5;
     border-radius: 16px;
     padding: 25px;
 }
+
 .solution-detail h3 {
     font-size: 21px;
     color: #245350;
 }
+
 .solution-detail h3 i {
     color: #2d8a76;
     margin-right: 10px;
 }
+
 .solution-detail p {
     color: #4f8587;
     margin-bottom: 0;
 }
+
 @media (max-width: 991px) {
     .hero-section h1 {
         font-size: 45px;
     }
+
     .white-section,
     .damage-container {
         padding: 35px;
     }
+
     .hero-image {
         width: 350px;
         max-width: 100%;
         height: auto;
     }
 }
+
 @media (max-width: 767px) {
     h2 {
         font-size: 28px;
     }
+
     .hero-section {
         min-height: auto;
         text-align: center;
     }
+
     .hero-section h1 {
         font-size: 38px;
     }
+
     .hero-description {
         font-size: 18px;
     }
+
     .hero-section .d-flex {
         justify-content: center;
     }
+
     .hero-image {
         width: 300px;
         max-width: 100%;
         height: auto;
     }
+
     .white-section,
     .damage-container {
         padding: 25px 18px;
     }
+
     .building-image {
         height: 160px;
     }
+
     .building-label {
         font-size: 10px;
     }
+
     .building-card ul {
         font-size: 11px;
     }
+
     .action-banner {
         padding: 25px;
         flex-direction: column;
         align-items: flex-start;
     }
+
     .quote-box {
         max-width: 100%;
         width: 100%;
     }
+
     .solution-card {
         padding: 20px;
     }
