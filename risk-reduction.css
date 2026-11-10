@@ -826,7 +826,6 @@ p {
     padding: 18px;
 }
 .strategy-content > div {
-    flex: 1;
     min-width: 0;
 }
 .strategy-content > i:first-child {
@@ -848,8 +847,8 @@ p {
 }
 .arrow-icon {
     color: #2d8a76;
-    margin-left: auto;
-    align-self: flex-end;
+    margin-left: 0;
+    align-self: center;
     flex-shrink: 0;
 }
 .action-banner {
