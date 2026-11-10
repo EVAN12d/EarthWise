@@ -392,6 +392,7 @@ body {
     justify-content: flex-start;
     gap: 8px;
     flex-wrap: wrap;
+    }
     .footer-main-link {
         display: inline-flex;
         align-items: center;
