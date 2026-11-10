@@ -610,7 +610,7 @@ body {
 
 /* Page intro */
 .resources-header {
-    margin-top: 30px;
+    margin-top: 110px;
 }
 .resources-hero {
     border-radius: 16px;
@@ -643,7 +643,6 @@ body {
     max-width: 700px;
     margin-bottom: 25px;
 }
-
 .resource-tags button {
     background-color: #e5f4f0;
     border-radius: 25px;
@@ -653,21 +652,26 @@ body {
     font-size: 14px;
     padding: 10px 15px;
 }
-
 .resource-tags button.active {
     background-color: #328e8e;
     color: white;
     border: none;
 }
-
 .resource-tags button:hover {
     background-color: #328e8e;
     color: white;
 }
-
 .resource-tags button.active:hover {
     background-color: #328e8e;
     color: white;
+}
+.resource-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.resource-tags button {
+    margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -769,6 +773,16 @@ body {
     }
     .resource-card-label {
         font-size: 10px;
+    }
+}
+@media (min-width: 750px) {
+    .resource-tags {
+        flex-wrap: nowrap;
+    }
+    .resource-tags button {
+        white-space: nowrap;
+        font-size: 12px;
+        padding: 10px;
     }
 }
 .login-required-modal {
