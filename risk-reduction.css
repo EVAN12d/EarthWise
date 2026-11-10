@@ -847,10 +847,7 @@ p {
     margin-bottom: 0;
 }
 .arrow-icon {
-    color: #2d8a76;
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
+    display: none;
 }
 .action-banner {
     background: linear-gradient(105deg, #123f40, #2d7772);
