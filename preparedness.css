@@ -1721,7 +1721,7 @@ html {
     font-weight: 500;
     line-height: 1.5;
 }
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
     .community-section {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -1730,7 +1730,7 @@ html {
         white-space: normal;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .community-tips {
         grid-template-columns: 1fr;
         gap: 20px;
