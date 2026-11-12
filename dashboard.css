@@ -651,18 +651,12 @@ h1, h2, h3, h4, h5 {
 @media (max-width: 575.98px) {
     .donation-card {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-    }
-    .donation-card > div {
-        flex: 1;
-        min-width: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
     }
     .donation-card .donate-btn {
         width: 140px;
-        max-width: 48%;
-        flex-shrink: 0;
+        max-width: 100%;
     }
 }
