@@ -1624,7 +1624,7 @@ html {
     object-fit: cover;
     border-radius: 16px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .home-school-section {
         grid-template-columns: 1fr;
         margin: 15px;
@@ -1634,10 +1634,17 @@ html {
         grid-column: 1 / -1;
     }
 }
-
 @media (max-width: 480px) {
     .place-card-content {
         grid-template-columns: 1fr;
+    }
+    .preparedness-image {
+        height: 180px;
+    }
+}
+@media (min-width: 481px) and (max-width: 1100px) {
+    .place-card-content {
+        grid-template-columns: 180px 1fr;
     }
     .preparedness-image {
         height: 180px;
