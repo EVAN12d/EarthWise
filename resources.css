@@ -615,7 +615,7 @@ body {
 }
 .resources-hero {
     border-radius: 16px;
-    padding: 55px;
+    padding: 35px 55px;
     box-shadow: 0 12px 36px rgba(44, 96, 91, 0.055);
 }
 .resource-label {
