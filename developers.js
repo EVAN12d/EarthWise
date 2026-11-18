@@ -40,7 +40,7 @@ const members = [
         bio: "Contributed to researching earthquake vulnerability and presenting information about areas that may face earthquake risks.",
         work: "Worked on Myanmar's earthquake vulnerability, areas at risk, earthquake information and statistics.",
         telegram: "https://t.me/Myat_Su83",
-        tiktok: "https://www.tiktok.com/@dexter32144?_r=1&_t=ZS-9BFbommmDgr"
+        tiktok: "https://www.tiktok.com/@mmt32144"
     }
 ];
 
